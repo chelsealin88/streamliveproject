@@ -26,7 +26,7 @@ struct APIs {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription)
-                return
+                return 
             }
         let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
             if let jsonResponse = jsonResponse as? [String: Any]{

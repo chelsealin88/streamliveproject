@@ -14,6 +14,7 @@
 		5E4DBC0A21F011D0006D3612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DBC0921F011D0006D3612 /* Assets.xcassets */; };
 		5E4DBC0D21F011D0006D3612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DBC0B21F011D0006D3612 /* LaunchScreen.storyboard */; };
 		5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */; };
+		5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5E4DBC0C21F011D0006D3612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4DBC0E21F011D0006D3612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
+		5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
 		62B2110F28B199225F18DE06 /* Pods-loginTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loginTestProject/Pods-loginTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		70877571EE815F09E9D6FF74 /* Pods_loginTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loginTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D9F98AB0ABCF6E1A391795 /* Pods-loginTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-loginTestProject/Pods-loginTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */,
 				5E4DBC0421F011CE006D3612 /* ViewController.swift */,
 				5E4DBC0621F011CE006D3612 /* Main.storyboard */,
+				5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */,
 				5E4DBC0921F011D0006D3612 /* Assets.xcassets */,
 				5E4DBC0B21F011D0006D3612 /* LaunchScreen.storyboard */,
 				5E4DBC0E21F011D0006D3612 /* Info.plist */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */,
 				5E4DBC0521F011CE006D3612 /* ViewController.swift in Sources */,
 				5E4DBC0321F011CE006D3612 /* AppDelegate.swift in Sources */,
 				5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */,
