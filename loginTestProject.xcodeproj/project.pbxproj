@@ -75,15 +75,23 @@
 			isa = PBXGroup;
 			children = (
 				5E4DBC0221F011CE006D3612 /* AppDelegate.swift */,
-				5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */,
 				5E4DBC0421F011CE006D3612 /* ViewController.swift */,
 				5E4DBC0621F011CE006D3612 /* Main.storyboard */,
 				5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */,
+				5ECFA39C21F844F7006CC9A9 /* buyerInfoViewController */,
 				5E4DBC0921F011D0006D3612 /* Assets.xcassets */,
 				5E4DBC0B21F011D0006D3612 /* LaunchScreen.storyboard */,
 				5E4DBC0E21F011D0006D3612 /* Info.plist */,
 			);
 			path = loginTestProject;
+			sourceTree = "<group>";
+		};
+		5ECFA39C21F844F7006CC9A9 /* buyerInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */,
+			);
+			path = buyerInfoViewController;
 			sourceTree = "<group>";
 		};
 		6C70AB773175B08C2F9BA0C2 /* Frameworks */ = {

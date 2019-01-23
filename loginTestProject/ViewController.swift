@@ -12,9 +12,15 @@ import FacebookLogin
 
 class ViewController: UIViewController {
     
-    let toIndentityVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IdentityViewController")
+    var userDefault = UserDefaults.standard
+    
+    let toIdentityVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IdentityViewController")
+    
+    
+    
     
     @IBAction func loginButtom(_ sender: Any) {
+        
         let loginManager = LoginManager()
         loginManager.logIn(readPermissions: [.publicProfile], viewController: self) { (result) in
             if let accessToken = AccessToken.current {
@@ -27,18 +33,23 @@ class ViewController: UIViewController {
             case .cancelled:
                 print("cancelled")
             case .success(let grantedPermissions, let declinedPermissions, let token):
-                print(grantedPermissions)
-                print(declinedPermissions)
-                print(token)
+//                print(grantedPermissions)
+//                print(declinedPermissions)
+//                print(token)
+                
+                self.userDefault.setValue(token.authenticationToken, forKey: UserDefaultKey.token.rawValue)
+                
                 APIs.postAPI(api: "/token", expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
-                    if (callBack["result"] as! Bool) {
+                    if ((callBack["result"] as? Int)?.boolenValue)! {
                         print("backend login success")
+        
                         DispatchQueue.main.async {
-                            self.navigationController?.pushViewController(self.toIndentityVC, animated: true)
+                            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
                         }
                         
                     } else {
-                        print(callBack["response"])
+                        self.showErrorAlert()
+                        
                     }
                 }
                 print("log in")
@@ -46,10 +57,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 
-    
-    
 //    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
 //    }
     
@@ -69,6 +77,27 @@ class ViewController: UIViewController {
 //
     }
 
-
 }
 
+extension Int {
+    var boolenValue: Bool { return self != 0 }
+}
+
+extension ViewController {
+    
+    func showErrorAlert() {
+        let alertController = UIAlertController(title: "Error!", message: "Please check your Facebook accout", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showSuccessAlert() {
+        let alertController = UIAlertController(title: "Login Success", message: "Click next to edit your User Information", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Next", style: .default) { (myalert) in
+            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
+        }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+}

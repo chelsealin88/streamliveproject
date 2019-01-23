@@ -8,7 +8,14 @@
 
 import Foundation
 
+
+enum UserDefaultKey: String{
+    case token = "userToken"
+    
+}
+
 struct APIs {
+    
     static func postAPI(api: String, expirationDate: Date, token: String, callBack: @escaping ([String: Any]) -> Void) {
         
         let body : [String:String] = ["expirationDate": "\(expirationDate)"]
