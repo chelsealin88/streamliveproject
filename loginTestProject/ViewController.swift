@@ -14,12 +14,11 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     
-    var userDefault = UserDefaults.standard
+    let userDefault = UserDefaults.standard
     
     let toIdentityVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IdentityViewController")
     
-    
-    
+
     
     @IBAction func loginButtom(_ sender: Any) {
         
@@ -39,11 +38,12 @@ class ViewController: UIViewController {
                 self.userDefault.setValue(token.authenticationToken, forKey: UserDefaultKey.token.rawValue)
                 print(self.userDefault.value(forKey: UserDefaultKey.token.rawValue))
                 
-             PostAPIs.postAPI(api: "/token", expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
+                Request.postAPI(api: "/token", header: Header.init(token: token.authenticationToken).header, expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
                 
                 DispatchQueue.main.async {
                     let json = try? JSON(data: callBack)
                     if let jsonResult = json!["result"].bool {
+                        
                         if jsonResult {
                             self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
                         }
@@ -68,16 +68,29 @@ class ViewController: UIViewController {
         
             }
         }
+    func getUserDefaultToken() {
+        
+        if let userToken = userDefault.value(forKey: UserDefaultKey.token.rawValue) as? String {
+            Request.getAPI(api: "/users", header: Header.init(token: userToken).header) { (callBack) in
+                DispatchQueue.main.async {
+                    
+                    do {
+                        let json = try JSON(data: callBack)
+                        json["result"].bool! ? self.navigationController?.pushViewController(self.toIdentityVC, animated: true) : self.showErrorAlert()
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getUserDefaultToken()
+    }
+}
     
-//    func getUserDefaultToken(tokenKey: String?) {
-//
-//        guard let usertoken = userDefault.value(forKey: tokenKey!) as? String else {
-//            showErrorAlert()
-//            return
-//        }
 
-//    }
 
 //    override func viewDidLoad() {
 //        super.viewDidLoad()

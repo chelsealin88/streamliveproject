@@ -10,13 +10,26 @@ import Foundation
 
 
 enum UserDefaultKey: String{
+    
     case token = "userToken"
     
 }
 
-struct PostAPIs {
+struct Header {
+    let header : [ String : String ]
     
-    static func postAPI(api: String, expirationDate: Date, token: String, callBack: @escaping (Data) -> Void) {
+    init(token: String) {
+        header = [
+            "Content-Type" : "application/json" ,
+            "X-Requested-With" : "XMLHttpRequest" ,
+            "Authorization" : "Bearer \(token)"
+        ]
+    }
+}
+
+struct Request {
+    
+    static func postAPI(api: String, header: [String:String],  expirationDate: Date, token: String, callBack: @escaping (Data) -> Void) {
         
         let body : [String:String] = ["expirationDate": "\(expirationDate)"]
         
@@ -26,9 +39,13 @@ struct PostAPIs {
         var request = URLRequest(url: url!)
         request.httpBody = jsonData
         request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-        request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        
+        for i in header {
+            request.addValue(i.value, forHTTPHeaderField: i.key)
+        }
+        //        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        //        request.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
+        //        request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
@@ -38,43 +55,47 @@ struct PostAPIs {
             
             callBack(data)
             
-//        let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
-//            if let jsonResponse = jsonResponse as? [String: Any]{
-//                callBack(jsonResponse)
-//            } 解析
+            //        let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
+            //            if let jsonResponse = jsonResponse as? [String: Any]{
+            //                callBack(jsonResponse)
+            //            } 解析
             
         }
         task.resume()
     }
     
-    struct GetAPIs {
+    
+    static func getAPI(api: String, header: [String:String], callBack: @escaping (Data) -> Void) {
         
-        static func getAPI(api: String, expirationDate: Date, token: String, callBack: @escaping ([String: Any]) -> Void) {
-            
-            let body : [String : String] = ["expirationDate": "\(expirationDate)"]
-            
-            let jsonData = try? JSONEncoder().encode(body)
-            
-            let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api)
-            var request = URLRequest(url: url!)
-            request.httpBody = jsonData
-            request.httpMethod = "GET"
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-            request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
-            
-            let task = URLSession.shared.dataTask(with: request) { (data, respones, error) in
-                guard let data = data, error == nil else {
-                    print(error?.localizedDescription)
-                    return
-                }
-                let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
-                if let jsonResponse = jsonResponse as? [String: Any]{
-                    callBack(jsonResponse)
-                }
-                
-            }
-            task.resume()
+        //            let body : [String : String] = ["expirationDate": "\(expirationDate)"]
+        
+        //            let jsonData = try? JSONEncoder().encode(body)
+        
+        let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api)
+        var request = URLRequest(url: url!)
+        //            request.httpBody = jsonData
+        request.httpMethod = "GET"
+        
+        for i in header {
+            request.addValue(i.value, forHTTPHeaderField: i.key)
         }
+        //            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        //            request.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
+        //            request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, respones, error) in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription)
+                return
+            }
+            //                let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
+            //                if let jsonResponse = jsonResponse as? [String: Any]{
+            //                    callBack(jsonResponse)
+            //                }
+            callBack(data)
+            
+        }
+        task.resume()
+        
     }
 }
