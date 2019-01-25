@@ -46,7 +46,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97227829694747925" green="0.95792597532272339" blue="0.91208362579345703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZZb-Cj-PdE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="7xI-8D-CmU"/>
                             <constraint firstItem="ZZb-Cj-PdE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QeV-S1-stf"/>
@@ -97,7 +97,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97227829694747925" green="0.95792597532272339" blue="0.91208362579345703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nWD-XB-O3H" firstAttribute="centerY" secondItem="6gW-sb-wRR" secondAttribute="centerY" id="3bj-xv-Mod"/>
                             <constraint firstItem="nWD-XB-O3H" firstAttribute="centerX" secondItem="6gW-sb-wRR" secondAttribute="centerX" id="dma-Mg-Mit"/>
@@ -137,7 +137,7 @@
                     <view key="view" contentMode="scaleToFill" id="pVx-Gs-tdj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97227829694747925" green="0.95792597532272339" blue="0.91208362579345703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oQp-SV-SJP"/>
                     </view>
                 </viewController>

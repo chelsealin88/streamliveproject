@@ -9,6 +9,8 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
+import SwiftyJSON
+
 
 class ViewController: UIViewController {
     
@@ -33,51 +35,58 @@ class ViewController: UIViewController {
             case .cancelled:
                 print("cancelled")
             case .success(let grantedPermissions, let declinedPermissions, let token):
-//                print(grantedPermissions)
-//                print(declinedPermissions)
-//                print(token)
-                
+
                 self.userDefault.setValue(token.authenticationToken, forKey: UserDefaultKey.token.rawValue)
+                print(self.userDefault.value(forKey: UserDefaultKey.token.rawValue))
                 
-                APIs.postAPI(api: "/token", expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
-                    if ((callBack["result"] as? Int)?.boolenValue)! {
-                        print("backend login success")
-        
-                        DispatchQueue.main.async {
+             PostAPIs.postAPI(api: "/token", expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
+                
+                DispatchQueue.main.async {
+                    let json = try? JSON(data: callBack)
+                    if let jsonResult = json!["result"].bool {
+                        if jsonResult {
                             self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
                         }
                         
-                    } else {
-                        self.showErrorAlert()
-                        
                     }
+                    print(json!["result"].string)
                 }
-                print("log in")
-                //        default:
+                    
+            }
+//                    if ((callBack["result"] as? Int)?.boolenValue)! {
+//                        print("backend login success")
+//
+//                        DispatchQueue.main.async {
+//                            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
+//                        }
+//
+//                    } else {
+//                        self.showErrorAlert()
+//
+//                    }
+                }
+        
             }
         }
     }
-
-//    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-//    }
     
-//    func loginButtonDidLogOut(_ loginButton: LoginButton) {
-//        print("log out")
-//    }
-//    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-//        let loginButton = LoginButton(readPermissions: [.publicProfile])
-//        loginButton.center = view.center
-//        loginButton.delegate = self
-//        view.addSubview(loginButton)
+//    func getUserDefaultToken(tokenKey: String?) {
 //
-    }
+//        guard let usertoken = userDefault.value(forKey: tokenKey!) as? String else {
+//            showErrorAlert()
+//            return
+//        }
 
-}
+//    }
+
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        navigationController?.isNavigationBarHidden = true
+//        getUserDefaultToken(tokenKey: UserDefaultKey.token.rawValue
+//        )
+//    }
+//
+//}
 
 extension Int {
     var boolenValue: Bool { return self != 0 }
