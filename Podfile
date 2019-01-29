@@ -10,5 +10,7 @@ target 'loginTestProject' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'SwiftyJSON' 
+  pod 'NVActivityIndicatorView'
 
 end
+

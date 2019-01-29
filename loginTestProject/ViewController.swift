@@ -10,15 +10,24 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 import SwiftyJSON
+import NVActivityIndicatorView
 
 
 class ViewController: UIViewController {
     
     let userDefault = UserDefaults.standard
-    
+    let myactivityAnimation = MyActivityIndicator()
     let toIdentityVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IdentityViewController")
     
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        myactivityAnimation.startAnimation()
+        getUserDefaultToken()
+        
+        
+    }
     
     @IBAction func loginButtom(_ sender: Any) {
         
@@ -34,8 +43,9 @@ class ViewController: UIViewController {
             case .cancelled:
                 print("cancelled")
             case .success(let grantedPermissions, let declinedPermissions, let token):
-
+                self.myactivityAnimation.startAnimation()
                 self.userDefault.setValue(token.authenticationToken, forKey: UserDefaultKey.token.rawValue)
+                
                 print(self.userDefault.value(forKey: UserDefaultKey.token.rawValue))
                 
                 Request.postAPI(api: "/token", header: Header.init(token: token.authenticationToken).header, expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
@@ -45,7 +55,8 @@ class ViewController: UIViewController {
                     if let jsonResult = json!["result"].bool {
                         
                         if jsonResult {
-                            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
+//                            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
+                            self.getUserDefaultToken()
                         }
                         
                     }
@@ -70,23 +81,33 @@ class ViewController: UIViewController {
         }
     func getUserDefaultToken() {
         
-        if let userToken = userDefault.value(forKey: UserDefaultKey.token.rawValue) as? String {
-            Request.getAPI(api: "/users", header: Header.init(token: userToken).header) { (callBack) in
-                DispatchQueue.main.async {
-                    
-                    do {
-                        let json = try JSON(data: callBack)
-                        json["result"].bool! ? self.navigationController?.pushViewController(self.toIdentityVC, animated: true) : self.showErrorAlert()
-                    } catch {
-                        print(error.localizedDescription)
+        guard let userToken = userDefault.value(forKey: UserDefaultKey.token.rawValue) as? String else {
+            print("test no userToken")
+            myactivityAnimation.stopAnimation()
+            return
+        }
+        
+        
+        Request.getAPI(api: "/users", header: Header.init(token: userToken).header) { (callBack) in
+            DispatchQueue.main.async {
+                
+                do {
+                    let json = try JSON(data: callBack)
+                    print("test have usertoken")
+                    guard json["result"].bool! else {
+                        self.myactivityAnimation.stopAnimation()
+                        return
                     }
+                    self.myactivityAnimation.stopAnimation()
+                    self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
+                } catch {
+                    self
+                    print(error.localizedDescription)
                 }
             }
+            
+            
         }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getUserDefaultToken()
     }
 }
     
