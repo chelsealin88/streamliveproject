@@ -15,10 +15,12 @@ class UserInfoViewController: UIViewController {
     
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBOutlet weak var confirmButton: UIButton!
     
-
+    @IBOutlet weak var skipButton: UIButton!
     
-//    override func viewDidLoad() {
+    
+    //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //
 //        // Do any additional setup after loading the view.
@@ -54,3 +56,13 @@ class UserInfoViewController: UIViewController {
 }
 
 
+extension UserInfoViewController {
+    
+    func showSkipAlert() {
+        let alertController = UIAlertController(title: "Alert!", message: "Please check your address or fill in the form after Stream", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+}
