@@ -19,6 +19,14 @@ class UserInfoViewController: UIViewController {
     
     @IBOutlet weak var skipButton: UIButton!
     
+    @IBOutlet weak var NameLabel: UILabel!
+    
+    @IBOutlet weak var UserNameLabel: UILabel!
+    
+    @IBOutlet weak var MailLabel: UILabel!
+    
+    @IBOutlet weak var UserMailLabel: UILabel!
+    
     
     //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -42,7 +50,7 @@ class UserInfoViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        userImage.layer.cornerRadius = 35
+        userImage.layer.cornerRadius = 63
         userImage.clipsToBounds = true
         userImage.contentMode = .scaleAspectFill
     }

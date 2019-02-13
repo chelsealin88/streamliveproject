@@ -15,7 +15,7 @@ class MyActivityIndicator: UIViewController , NVActivityIndicatorViewable {
     
     func startAnimation() {
         
-        startAnimating(CGSize(width: 150, height: 150), message: "hello, test", messageFont: UIFont(name: "Baskerville", size: 20), type: NVActivityIndicatorType.ballScaleMultiple, color: .black, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor:UIColor(red: 150/255, green: 120/255, blue: 40/255, alpha: 0.5) , fadeInAnimation: nil)
+        startAnimating(CGSize(width: 150, height: 150), message: "", messageFont: UIFont(name: "Baskerville", size: 20), type: NVActivityIndicatorType.ballScaleMultiple, color: .white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil, textColor:UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5) , fadeInAnimation: nil)
         
     }
         
