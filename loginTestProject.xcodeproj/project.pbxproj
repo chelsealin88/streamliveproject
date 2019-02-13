@@ -22,6 +22,7 @@
 		5EFAAE5422115CD200E4533F /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAAE5222115CD200E4533F /* OrderTableViewCell.swift */; };
 		5EFAAE5522115CD200E4533F /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFAAE5322115CD200E4533F /* OrderTableViewCell.xib */; };
 		5EFAAE57221279B800E4533F /* SaveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAAE56221279B800E4533F /* SaveItem.swift */; };
+		5EFAAE592213F5B600E4533F /* GetItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAAE582213F5B600E4533F /* GetItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		5EFAAE5222115CD200E4533F /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		5EFAAE5322115CD200E4533F /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		5EFAAE56221279B800E4533F /* SaveItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveItem.swift; sourceTree = "<group>"; };
+		5EFAAE582213F5B600E4533F /* GetItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItems.swift; sourceTree = "<group>"; };
 		62B2110F28B199225F18DE06 /* Pods-loginTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loginTestProject/Pods-loginTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		70877571EE815F09E9D6FF74 /* Pods_loginTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loginTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D9F98AB0ABCF6E1A391795 /* Pods-loginTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-loginTestProject/Pods-loginTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				5EFAAE5222115CD200E4533F /* OrderTableViewCell.swift */,
 				5EFAAE5322115CD200E4533F /* OrderTableViewCell.xib */,
 				5EFAAE56221279B800E4533F /* SaveItem.swift */,
+				5EFAAE582213F5B600E4533F /* GetItems.swift */,
 			);
 			path = sellerAddProduct;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */,
 				5E1621DE2204360A008C842C /* AddProductViewController.swift in Sources */,
 				5EFAAE5022115C1800E4533F /* OrderListTableViewController.swift in Sources */,
+				5EFAAE592213F5B600E4533F /* GetItems.swift in Sources */,
 				5EFAAE57221279B800E4533F /* SaveItem.swift in Sources */,
 				5E4DBC0521F011CE006D3612 /* ViewController.swift in Sources */,
 				5EFAAE5422115CD200E4533F /* OrderTableViewCell.swift in Sources */,

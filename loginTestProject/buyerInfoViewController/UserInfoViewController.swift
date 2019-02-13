@@ -50,7 +50,7 @@ class UserInfoViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        userImage.layer.cornerRadius = 63
+        userImage.layer.cornerRadius = userImage.bounds.width / 2
         userImage.clipsToBounds = true
         userImage.contentMode = .scaleAspectFill
     }

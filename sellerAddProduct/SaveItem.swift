@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 struct SaveItems {
     
@@ -44,8 +45,91 @@ struct SaveItems {
                 }
             }
         }
+        
+        
+        
     
     
     }
-
+//
+//    func getNewProduct(_ api: String, _ header: [String: String], _ callBack: @escaping (_ statusCode: Int, _ data: Data) -> Void){
+//        guard let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api) else { return }
+//        var requset = URLRequest(url: url)
+//        for (key, value) in header {
+//            requset.addValue(value, forHTTPHeaderField: key)
+//        }
+//        AF.request(requset).responseJSON { (response) in
+//            if response.result.isSuccess {
+//
+//                if let result = response.value as? Data, let statusCode1 = response.response?.statusCode {
+//                    let json = try? JSON(data: result)
+//                    callBack(statusCode1, result)
+//                }
+//            }
+//        }
+//    }
+//
+//    func analyzes(_ statusCode: Int, _ data: Data, myArray: inout [MyData]){
+//        if statusCode == 200 {
+//            do {
+//                let json = try JSON(data: data)
+////                for i in json {
+////
+////                }
+//
+////                var descriptionOption: String?
+////                var image: UIImage?
+////                guard let result = json["result"].bool else { return }
+////                guard let response = json["response"].dictionary else { return }
+////                guard let name = response["name"]?.string else { return }
+////                if let description = response["description"]?.string {
+////                    descriptionOption = description
+////                } else {
+////                    descriptionOption = nil
+////                }
+////                guard let stock = response["stock"]?.int else { return }
+////                guard let cost = response["cost"]?.int else { return }
+////                guard let price = response["unit_price"]?.int else { return }
+////                if let imageUrl = response["images"]?.string {
+////                    image = imageUrl.downloadImage()!
+////                } else {
+////                    image = nil
+////                }
+////
+////                myArray.append(MyData.init(name: name, description: descriptionOption, cost: cost, price: price, stock: stock, image: image))
+//
+//
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        } else {
+//
+//        }
+//    }
+//
+//}
+//
+//
+//extension String {
+//    func downloadImage() -> UIImage? {
+//        guard let imageURL = URL(string: self) else { return nil }
+//        do {
+//            let imageData = try Data(contentsOf: imageURL)
+//            guard let image = UIImage(data: imageData) else { return nil }
+//            return image
+//        } catch {
+//            print(error.localizedDescription)
+//            return nil
+//        }
+//    }
+//}
+//
+//struct MyData {
+//    let name: String
+//    let description: String?
+//    let cost: Int
+//    let price: Int
+//    let stock: Int
+//    let image: UIImage?
+//}
 }

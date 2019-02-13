@@ -10,6 +10,12 @@ import UIKit
 
 class OrderListTableViewController: UITableViewController {
     
+    var items = [MyData]()
+    
+    let getItems = GetItems()
+    
+    let header = Header.init(token: UserDefaults.standard.value(forKey: UserDefaultKey.token.rawValue) as! String).header
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +27,16 @@ class OrderListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        items.removeAll()
+        getItems.getNewProduct("/items", header) { (statusCode, data) in
+            
+            self.getItems.analyzes(statusCode, data, self.tableView, myArray: &self.items)
+        }
+    }
+    
 
     // MARK: - Table view data source
 
@@ -31,16 +47,19 @@ class OrderListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return items.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrderTableViewCell
         
-//         cell.NameLabel =
-
-        // Configure the cell...
+        cell.NameLabel.text = items[indexPath.row].name
+        cell.DescriptionLabel.text = items[indexPath.row].description
+        cell.PriceNumber.text = "\(items[indexPath.row].price)"
+        cell.CostNumber.text = "\(items[indexPath.row].cost)"
+        cell.StockNumber.text = "\(items[indexPath.row].stock)"
+        cell.ProductImage.image = items[indexPath.row].image
 
         return cell
     }
@@ -59,10 +78,12 @@ class OrderListTableViewController: UITableViewController {
 //    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 //        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
 //
-////            self.xxarray.remove(at: )
+//            self.items.remove(at: indexPath.row)
 //            self.tableView.deleteRows(at: [indexPath], with: .fade)
 //
 //            completionHandler(true)
+//
+//            return
 //
 //        }
 //
@@ -107,5 +128,8 @@ class OrderListTableViewController: UITableViewController {
     }
     */
     
-}
 
+    
+    
+
+}
