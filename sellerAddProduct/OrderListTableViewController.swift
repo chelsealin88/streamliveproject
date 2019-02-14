@@ -75,6 +75,32 @@ class OrderListTableViewController: UITableViewController {
 //        }
 //    }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view , completion) in
+            
+            completion(true)
+            
+        }
+        
+        action.backgroundColor = .red
+        
+        return UISwipeActionsConfiguration(actions: [action])
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Push") { (action, view , completion) in
+            
+            completion(true)
+            
+        }
+        
+        action.backgroundColor = .black
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    
 //    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 //        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
 //
@@ -82,11 +108,11 @@ class OrderListTableViewController: UITableViewController {
 //            self.tableView.deleteRows(at: [indexPath], with: .fade)
 //
 //            completionHandler(true)
-//
-//            return
-//
 //        }
 //
+//
+//        }
+
 //
 //    }
     

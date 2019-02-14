@@ -51,9 +51,23 @@ class AddProductViewController: UITableViewController, UINavigationControllerDel
                 print(error.localizedDescription)
             }
            
-           
         }
-    }
+        
+        
+        let alert = UIAlertController(title: "Hello", message: "Your item added successfully", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in
+            self.NameTextField.text = ""
+            self.PriceTextField.text = ""
+            self.DescriptionTextField.text = ""
+            self.CostTextField.text = ""
+            self.StockTextField.text = ""
+        }
+        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
+}
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -62,7 +76,7 @@ class AddProductViewController: UITableViewController, UINavigationControllerDel
             
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
                 let imagePicker = UIImagePickerController()
-                print("button used")
+//                print("button used")
                 imagePicker.delegate = self
                 imagePicker.sourceType = .camera
                 self.present(imagePicker, animated: true, completion: nil)
@@ -122,4 +136,12 @@ class AddProductViewController: UITableViewController, UINavigationControllerDel
 
 }
 
+
+//extension ViewController {
+//
+//    func saveAlert() {
+//
+//    }
+//
+//}
 

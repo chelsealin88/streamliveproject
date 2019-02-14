@@ -540,9 +540,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hSw-c9-n1f">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hSw-c9-n1f">
                                 <rect key="frame" x="0.0" y="216" width="375" height="388"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xWx-Eg-WJr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xWx-Eg-WJr" id="1pF-mo-GwH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fH5-QT-d9a">
                                 <rect key="frame" x="45" y="612" width="284" height="45"/>
@@ -629,11 +639,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97226065397262573" green="0.95734566450119019" blue="0.91764956712722778" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="fH5-QT-d9a" firstAttribute="top" secondItem="hSw-c9-n1f" secondAttribute="bottom" constant="8" id="0xH-Qu-x1n"/>
                             <constraint firstItem="oQp-SV-SJP" firstAttribute="trailing" secondItem="fH5-QT-d9a" secondAttribute="trailing" constant="46" id="66Z-jR-zXM"/>
                             <constraint firstItem="oQp-SV-SJP" firstAttribute="bottom" secondItem="fH5-QT-d9a" secondAttribute="bottom" constant="10" id="D9a-Ki-6s8"/>
+                            <constraint firstItem="hSw-c9-n1f" firstAttribute="trailing" secondItem="oQp-SV-SJP" secondAttribute="trailing" id="FMu-U6-qHM"/>
+                            <constraint firstItem="hSw-c9-n1f" firstAttribute="leading" secondItem="oQp-SV-SJP" secondAttribute="leading" id="Iu7-LQ-joy"/>
+                            <constraint firstItem="hSw-c9-n1f" firstAttribute="top" secondItem="JoB-fF-mqH" secondAttribute="bottom" constant="12" id="O4L-lj-dqg"/>
                             <constraint firstItem="fH5-QT-d9a" firstAttribute="leading" secondItem="oQp-SV-SJP" secondAttribute="leading" constant="45" id="lVk-Dl-ANz"/>
                             <constraint firstItem="JoB-fF-mqH" firstAttribute="top" secondItem="oQp-SV-SJP" secondAttribute="top" constant="10" id="qnU-Fw-aoU"/>
-                            <constraint firstItem="hSw-c9-n1f" firstAttribute="top" secondItem="JoB-fF-mqH" secondAttribute="bottom" constant="10" id="xk8-6X-wz6"/>
                             <constraint firstItem="JoB-fF-mqH" firstAttribute="leading" secondItem="oQp-SV-SJP" secondAttribute="leading" constant="45" id="zy8-8T-nbr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oQp-SV-SJP"/>
