@@ -141,6 +141,16 @@
                             <outlet property="delegate" destination="ikM-qQ-Bqr" id="yM2-0N-vNF"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="TB1-s0-sgn">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="EtC-g8-goA">
+                                <color key="tintColor" red="0.57842874529999999" green="0.034700421840000002" blue="0.044664306119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="pause" id="dOG-Bk-1Gk">
+                                <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6D-eU-WBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -678,7 +688,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywr-3V-Dke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4276" y="89.505247376311857"/>
+            <point key="canvasLocation" x="4518" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RCd-uG-pUu">

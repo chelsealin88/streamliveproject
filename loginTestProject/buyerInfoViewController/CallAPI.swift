@@ -88,4 +88,27 @@ struct Request {
         task.resume()
         
     }
+    
+    static func delete(_ api: String, _ header: [String: String], _ body: [String: [Int]], _ callBack: @escaping (Data) -> Void){
+        guard let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api) else { return }
+        var request = URLRequest(url: url)
+        let body = try? JSONSerialization.data(withJSONObject: body, options: [])
+        request.httpBody = body
+        request.httpMethod = "DELETE"
+        for (key, value) in header {
+            request.addValue(value, forHTTPHeaderField: key)
+        }
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else { return }
+            guard let httpResponse = response as? HTTPURLResponse else { return }
+            guard let data = data else { return }
+//            let statuscode = httpResponse.statusCode
+            
+            callBack(data)
+            
+        }
+        task.resume()
+    }
 }
+
+

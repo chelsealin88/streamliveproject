@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class OrderListTableViewController: UITableViewController {
     
@@ -75,8 +76,28 @@ class OrderListTableViewController: UITableViewController {
 //        }
 //    }
     
+    
+    // Delete
+    
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view , completion) in
+            
+            DeleteItem().deleteProduct(self.items[indexPath.row].id, self.header, callBack: { (data) in
+                do {
+                    let json = try JSON(data: data)
+                    guard let result = json["result"].bool else { return }
+                    if result {
+                        self.items.remove(at: indexPath.row)
+                        DispatchQueue.main.async {
+                            self.tableView.deleteRows(at: [indexPath], with: .fade)
+                        }
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
+            
+            print(self.items[indexPath.row].id)
             
             completion(true)
             

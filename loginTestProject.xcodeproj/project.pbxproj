@@ -14,6 +14,7 @@
 		5E4DBC0821F011CE006D3612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DBC0621F011CE006D3612 /* Main.storyboard */; };
 		5E4DBC0A21F011D0006D3612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DBC0921F011D0006D3612 /* Assets.xcassets */; };
 		5E4DBC0D21F011D0006D3612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DBC0B21F011D0006D3612 /* LaunchScreen.storyboard */; };
+		5E518C0222153E8A00BACA55 /* DeleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E518C0122153E8A00BACA55 /* DeleteItem.swift */; };
 		5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */; };
 		5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */; };
 		5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3323721FFFEAE008B62B9 /* animation.swift */; };
@@ -34,6 +35,7 @@
 		5E4DBC0921F011D0006D3612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E4DBC0C21F011D0006D3612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4DBC0E21F011D0006D3612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E518C0122153E8A00BACA55 /* DeleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItem.swift; sourceTree = "<group>"; };
 		5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
 		5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
 		5EF3323721FFFEAE008B62B9 /* animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				5EFAAE5222115CD200E4533F /* OrderTableViewCell.swift */,
 				5EFAAE5322115CD200E4533F /* OrderTableViewCell.xib */,
 				5EFAAE56221279B800E4533F /* SaveItem.swift */,
+				5E518C0122153E8A00BACA55 /* DeleteItem.swift */,
 				5EFAAE582213F5B600E4533F /* GetItems.swift */,
 			);
 			path = sellerAddProduct;
@@ -287,6 +290,7 @@
 				5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */,
 				5E1621DE2204360A008C842C /* AddProductViewController.swift in Sources */,
 				5EFAAE5022115C1800E4533F /* OrderListTableViewController.swift in Sources */,
+				5E518C0222153E8A00BACA55 /* DeleteItem.swift in Sources */,
 				5EFAAE592213F5B600E4533F /* GetItems.swift in Sources */,
 				5EFAAE57221279B800E4533F /* SaveItem.swift in Sources */,
 				5E4DBC0521F011CE006D3612 /* ViewController.swift in Sources */,

@@ -45,6 +45,7 @@ struct GetItems {
                 var itemImage: UIImage?
                 
                 guard let name = item["name"].string else { return }
+                guard let id = item["id"].int else { return }
                 guard let cost = item["cost"].int else { return }
                 guard let price = item["unit_price"].int else { return }
                 guard let stock = item["stock"].int else { return }
@@ -58,7 +59,7 @@ struct GetItems {
                 } else {
                     itemImage = nil
                 }
-                myArray.append(MyData.init(name: name, description: itemDescription, cost: cost, price: price, stock: stock, image: itemImage))
+                myArray.append(MyData.init(name: name, id: id, description: itemDescription, cost: cost, price: price, stock: stock, image: itemImage))
                 
             }
             
@@ -123,6 +124,7 @@ extension String {
 
 struct MyData {
     let name: String
+    let id: Int
     let description: String?
     let cost: Int
     let price: Int
