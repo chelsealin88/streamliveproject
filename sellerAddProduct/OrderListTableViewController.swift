@@ -11,6 +11,10 @@ import SwiftyJSON
 
 class OrderListTableViewController: UITableViewController {
     
+    
+    @IBAction func StopLiveButton(_ sender: Any) {
+    }
+    
     var items = [MyData]()
     
     let getItems = GetItems()
@@ -29,12 +33,69 @@ class OrderListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    @IBAction func startLiveButton(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Start your Live Steam", message: "please type your Channel ID and Token", preferredStyle: .alert)
+        
+        alert.addTextField { (textfield) in
+            textfield.placeholder = "Channel ID"
+        }
+        alert.addTextField { (textfield) in
+            textfield.placeholder = "Channel token"
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { (actionAlert) in
+            let completeTextField = alert.textFields![0] as UITextField
+            let cancelTextField = alert.textFields![1] as UITextField
+        }
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         items.removeAll()
         getItems.getNewProduct("/items", header) { (statusCode, data) in
+            if statusCode == 200 {
+                do {
+                    let json = try JSON(data: data)
+                    guard let response = json["response"].array else { return }
+                    for item in response {
+                        var itemDescription: String?
+                        var itemImage: UIImage?
+                        
+                        guard let name = item["name"].string else { return }
+                        guard let id = item["id"].int else { return }
+                        guard let cost = item["cost"].int else { return }
+                        guard let price = item["unit_price"].int else { return }
+                        guard let stock = item["stock"].int else { return }
+                        if let description = item["description"].string {
+                            itemDescription = description
+                        } else {
+                            itemDescription = nil
+                        }
+                        if let imageUrl = item["images"].string {
+                            itemImage = imageUrl.downloadImage()!
+                        } else {
+                            itemImage = nil
+                        }
+                        
+                        self.items.append(MyData.init(name: name, id: id, description: itemDescription, cost: cost, price: price, stock: stock, image: itemImage))
+                    }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
             
-            self.getItems.analyzes(statusCode, data, self.tableView, myArray: &self.items)
+//            self.getItems.analyzes(statusCode, data, self.tableView, myArray: &self.items)
         }
     }
     

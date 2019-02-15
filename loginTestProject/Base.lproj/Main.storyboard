@@ -145,9 +145,15 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="play" id="EtC-g8-goA">
                                 <color key="tintColor" red="0.57842874529999999" green="0.034700421840000002" blue="0.044664306119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="startLiveButton:" destination="ikM-qQ-Bqr" id="tzU-KH-SdF"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="pause" id="dOG-Bk-1Gk">
                                 <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="StopLiveButton:" destination="ikM-qQ-Bqr" id="tOW-a3-UTL"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
