@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class OrderListTableViewController: UITableViewController {
     
-    
+//    @IBOutlet weak var startLiveButton
     @IBAction func StopLiveButton(_ sender: Any) {
     }
     
@@ -33,6 +33,8 @@ class OrderListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    // Starting Steam Alert
+    
     @IBAction func startLiveButton(_ sender: Any) {
         
         let alert = UIAlertController(title: "Start your Live Steam", message: "please type your Channel ID and Token", preferredStyle: .alert)
@@ -48,8 +50,26 @@ class OrderListTableViewController: UITableViewController {
         alert.addAction(cancelAction)
         
         let okAction = UIAlertAction(title: "OK", style: .default) { (actionAlert) in
-            let completeTextField = alert.textFields![0] as UITextField
-            let cancelTextField = alert.textFields![1] as UITextField
+            
+            
+            
+            
+            
+            let iframeTextField = alert.textFields![0] as UITextField
+            let channelTextField = alert.textFields![1] as UITextField
+            guard let iframeText = iframeTextField.text else { return }
+            guard let channelDescriptionText = channelTextField.text else { return }
+            let body = [
+                "iFrame" : iframeText,
+                "channel_description" : channelDescriptionText
+            ]
+            StartLive.startingLive(self.header, body, callback: { (result, channelToken) in
+
+                if result {
+                    
+                }
+
+            })
         }
         alert.addAction(okAction)
         
@@ -129,13 +149,6 @@ class OrderListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
-    
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
     
     
     // Delete
@@ -236,8 +249,13 @@ class OrderListTableViewController: UITableViewController {
     }
     */
     
+}
 
-    
-    
-
+extension UIButton {
+    func changingButton(_ button: inout UIButton ) {
+        self.isEnabled = false
+        button.alpha = 0.5
+        button.isEnabled = true
+        button.alpha = 1
+    }
 }

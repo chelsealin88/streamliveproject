@@ -27,11 +27,13 @@ struct Header {
     }
 }
 
+/**************** POST API ****************/
+
 struct Request {
     
-    static func postAPI(api: String, header: [String:String],  expirationDate: Date, token: String, callBack: @escaping (Data) -> Void) {
+    static func postAPI(api: String, header: [String:String], _ body: [String: String], callBack: @escaping (_ data: Data, _ statusCode: Int) -> Void) {
         
-        let body : [String:String] = ["expirationDate": "\(expirationDate)"]
+//        let body : [String:String] = ["expirationDate": "\(expirationDate)"]
         
         let jsonData = try? JSONEncoder().encode(body)
         
@@ -52,8 +54,9 @@ struct Request {
                 print(error?.localizedDescription)
                 return 
             }
+            guard let httpResponse = response as? HTTPURLResponse else { return }
             
-            callBack(data)
+            callBack(data, httpResponse.statusCode)
             
             //        let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
             //            if let jsonResponse = jsonResponse as? [String: Any]{
@@ -64,12 +67,13 @@ struct Request {
         task.resume()
     }
     
+    /**************** GET API ****************/
+
     
     static func getAPI(api: String, header: [String:String], callBack: @escaping (Data) -> Void) {
         
         let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api)
         var request = URLRequest(url: url!)
-        //            request.httpBody = jsonData
         request.httpMethod = "GET"
         
         for i in header {
@@ -89,7 +93,35 @@ struct Request {
         
     }
     
+    /**************** PUT API ****************/
+
+    static func PutAPI(api: String, header: [String: String], _ callBack: @escaping (Data) -> Void) {
+        
+        guard let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        
+        for (key , value) in header {
+            request.addValue(value, forHTTPHeaderField: key)
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else { return }
+            guard let httpResponse = response as? HTTPURLResponse else { return }
+            guard let data = data else { return }
+            
+            callBack(data)
+        }
+        
+        task.resume()
+        
+    }
+    
+    /**************** DELETE PRODUCT API ****************/
+
     static func delete(_ api: String, _ header: [String: String], _ body: [String: [Int]], _ callBack: @escaping (Data) -> Void){
+        
+        
         guard let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api) else { return }
         var request = URLRequest(url: url)
         let body = try? JSONSerialization.data(withJSONObject: body, options: [])

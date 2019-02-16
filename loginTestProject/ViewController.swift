@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
+    
+    
     @IBAction func loginButtom(_ sender: Any) {
         
         let loginManager = LoginManager()
@@ -47,23 +51,38 @@ class ViewController: UIViewController {
                 self.userDefault.setValue(token.authenticationToken, forKey: UserDefaultKey.token.rawValue)
                 
                 print(self.userDefault.value(forKey: UserDefaultKey.token.rawValue))
-                
-                Request.postAPI(api: "/token", header: Header.init(token: token.authenticationToken).header, expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
-                
-                DispatchQueue.main.async {
-                    let json = try? JSON(data: callBack)
-                    if let jsonResult = json!["result"].bool {
-                        
-                        if jsonResult {
-//                            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
-                            self.getUserDefaultToken()
+                let body : [String:String] = ["expirationDate": "\(token.expirationDate)"]
+                Request.postAPI(api: "/token", header: Header.init(token: token.authenticationToken).header, body, callBack: { (data, _) in
+                    DispatchQueue.main.async {
+                        let json = try? JSON(data: data)
+                        if let jsonResult = json!["result"].bool {
+                            
+                            if jsonResult {
+                                //                            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
+                                self.getUserDefaultToken()
+                            }
+                            
                         }
-                        
+                        print(json!["result"].string)
                     }
-                    print(json!["result"].string)
-                }
-                    
-            }
+                })
+                
+//                Request.postAPI(api: "/token", header: Header.init(token: token.authenticationToken).header, expirationDate: token.expirationDate, token: token.authenticationToken) { (callBack) in
+//                
+//                DispatchQueue.main.async {
+//                    let json = try? JSON(data: callBack)
+//                    if let jsonResult = json!["result"].bool {
+//                        
+//                        if jsonResult {
+//                            self.navigationController?.pushViewController(self.toIdentityVC, animated: true)
+//                            self.getUserDefaultToken()
+//                        }
+//
+//                    }
+//                    print(json!["result"].string)
+//                }
+//
+//            }
 //                    if ((callBack["result"] as? Int)?.boolenValue)! {
 //                        print("backend login success")
 //

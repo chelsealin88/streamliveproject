@@ -39,11 +39,11 @@ struct GetItems {
         do {
             let json = try JSON(data: data)
             guard let response = json["response"].array else { return }
-            
+
             for item in response {
                 var itemDescription: String?
                 var itemImage: UIImage?
-                
+
                 guard let name = item["name"].string else { return }
                 guard let id = item["id"].int else { return }
                 guard let cost = item["cost"].int else { return }
@@ -60,13 +60,13 @@ struct GetItems {
                     itemImage = nil
                 }
                 myArray.append(MyData.init(name: name, id: id, description: itemDescription, cost: cost, price: price, stock: stock, image: itemImage))
-                
+
             }
-            
+
             DispatchQueue.main.async {
                 tableView.reloadData()
             }
-            
+    
     
 //            let r = response["response"]
 //            guard let jsonArray = response["response"]?.array else { return }

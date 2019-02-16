@@ -15,6 +15,7 @@
 		5E4DBC0A21F011D0006D3612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DBC0921F011D0006D3612 /* Assets.xcassets */; };
 		5E4DBC0D21F011D0006D3612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4DBC0B21F011D0006D3612 /* LaunchScreen.storyboard */; };
 		5E518C0222153E8A00BACA55 /* DeleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E518C0122153E8A00BACA55 /* DeleteItem.swift */; };
+		5EC24CF52217ABFE001019C3 /* StartLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24CF42217ABFE001019C3 /* StartLive.swift */; };
 		5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */; };
 		5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */; };
 		5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3323721FFFEAE008B62B9 /* animation.swift */; };
@@ -36,6 +37,7 @@
 		5E4DBC0C21F011D0006D3612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4DBC0E21F011D0006D3612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E518C0122153E8A00BACA55 /* DeleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItem.swift; sourceTree = "<group>"; };
+		5EC24CF42217ABFE001019C3 /* StartLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLive.swift; sourceTree = "<group>"; };
 		5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
 		5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
 		5EF3323721FFFEAE008B62B9 /* animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				5EFAAE56221279B800E4533F /* SaveItem.swift */,
 				5E518C0122153E8A00BACA55 /* DeleteItem.swift */,
 				5EFAAE582213F5B600E4533F /* GetItems.swift */,
+				5EC24CF42217ABFE001019C3 /* StartLive.swift */,
 			);
 			path = sellerAddProduct;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */,
+				5EC24CF52217ABFE001019C3 /* StartLive.swift in Sources */,
 				5EF3327822002F82008B62B9 /* UserInfoViewController.swift in Sources */,
 				5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */,
 				5E1621DE2204360A008C842C /* AddProductViewController.swift in Sources */,

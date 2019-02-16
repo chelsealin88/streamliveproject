@@ -110,9 +110,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xnl-ua-95N"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qlk-vZ-AqI">
-                        <barButtonItem key="rightBarButtonItem" title="Log out" id="tG5-0e-9yN"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="qlk-vZ-AqI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrI-Lt-SRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
