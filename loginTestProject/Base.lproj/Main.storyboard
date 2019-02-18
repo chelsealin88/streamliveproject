@@ -164,35 +164,26 @@
             </objects>
             <point key="canvasLocation" x="2783" y="1642"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Stream History-->
         <scene sceneID="7wq-za-FeB">
             <objects>
-                <tableViewController id="A8W-J7-f5Y" sceneMemberID="viewController">
+                <tableViewController id="A8W-J7-f5Y" customClass="LiveHistoryTableViewController" customModule="loginTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2CV-tB-fRD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1Xw-jK-PNb">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Xw-jK-PNb" id="crO-0D-SAb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="A8W-J7-f5Y" id="5ce-Ql-7Ca"/>
                             <outlet property="delegate" destination="A8W-J7-f5Y" id="gAt-Ui-GVD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Stream History" id="1fq-yA-y6e"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftk-vN-gDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3447" y="1641"/>
+            <point key="canvasLocation" x="3445.5999999999999" y="1640.3298350824589"/>
         </scene>
-        <!--View Controller-->
+        <!--Live-->
         <scene sceneID="Eiq-op-EC5">
             <objects>
                 <viewController id="NzV-to-Axi" sceneMemberID="viewController">
@@ -200,20 +191,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHm-q5-V1S">
-                                <rect key="frame" x="0.0" y="64" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AHm-q5-V1S">
+                                <rect key="frame" x="0.0" y="64" width="375" height="453"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AHm-q5-V1S" firstAttribute="leading" secondItem="TXc-GC-U7p" secondAttribute="leading" id="Ouh-UG-mZ8"/>
+                            <constraint firstItem="TXc-GC-U7p" firstAttribute="bottom" secondItem="AHm-q5-V1S" secondAttribute="bottom" constant="150" id="dwS-M4-AQu"/>
+                            <constraint firstItem="TXc-GC-U7p" firstAttribute="trailing" secondItem="AHm-q5-V1S" secondAttribute="trailing" id="fad-bC-QYF"/>
+                            <constraint firstItem="AHm-q5-V1S" firstAttribute="top" secondItem="TXc-GC-U7p" secondAttribute="top" id="hbh-qT-NEh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TXc-GC-U7p"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Live" id="kdJ-3r-uoq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rU3-Fy-dRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4138" y="1641"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu-->
         <scene sceneID="pSp-Y0-w5H">
             <objects>
                 <viewController id="XaX-yr-pdq" sceneMemberID="viewController">
@@ -304,12 +302,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gCu-di-bLA"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Menu" id="i5y-dh-cvI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tql-mk-2DW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2852" y="833.43328335832086"/>
         </scene>
-        <!--Add Product View Controller-->
+        <!--Add Product-->
         <scene sceneID="U3s-SK-Ls5">
             <objects>
                 <tableViewController id="r5C-Zx-5gC" customClass="AddProductViewController" customModule="loginTestProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -512,7 +511,7 @@
                             <outlet property="delegate" destination="r5C-Zx-5gC" id="Kea-Ej-9Un"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Eo2-S1-dp1">
+                    <navigationItem key="navigationItem" title="Add Product" id="Eo2-S1-dp1">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="PvA-w3-nn6">
                             <connections>
                                 <action selector="SaveItemButton:" destination="r5C-Zx-5gC" id="Ki8-dU-DZc"/>
@@ -556,7 +555,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="89.505247376311857"/>
         </scene>
-        <!--User Info View Controller-->
+        <!--User Information-->
         <scene sceneID="Ob7-oJ-ZV7">
             <objects>
                 <viewController id="KqD-Vu-GTJ" customClass="UserInfoViewController" customModule="loginTestProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -675,6 +674,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oQp-SV-SJP"/>
                     </view>
+                    <navigationItem key="navigationItem" title="User Information" id="SVJ-Zz-HRT"/>
                     <connections>
                         <outlet property="MailLabel" destination="OrS-Df-k71" id="3s8-YH-vgn"/>
                         <outlet property="NameLabel" destination="EAn-wP-gMa" id="OED-vu-VqN"/>
@@ -702,7 +702,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywr-3V-Dke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4518" y="90"/>
+            <point key="canvasLocation" x="4407" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RCd-uG-pUu">

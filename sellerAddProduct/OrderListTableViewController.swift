@@ -77,7 +77,7 @@ class OrderListTableViewController: UITableViewController {
     
     @IBAction func StopLiveButton(_ sender: Any) {
 
-        let alert = UIAlertController(title: "Turn off your Live Stream", message: "Press confirm Button to turn off the Stream", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Turn off your Live Stream", message: "", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alert.addAction(cancelAction)
 
@@ -178,7 +178,15 @@ class OrderListTableViewController: UITableViewController {
                     }
                     
                 })
+            } else {
+
+                let alert = UIAlertController(title: "You can not delete the item while streaming!", message: "", preferredStyle: UIAlertController.Style.alert)
+                let okaction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okaction)
+                self.present(alert, animated: true, completion: nil)
+                
             }
+            
             print(self.items[indexPath.row].id)
             
             completion(true)
@@ -196,7 +204,9 @@ class OrderListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal, title: "Push") { (action, view , completion) in
+            
             if self.streamStatus == true {
+                
                 PushItem.PushItems(self.items[indexPath.row].id, self.header, [:], callback: { (data) in
                     do {
                         let json = try JSON(data: data)
@@ -206,6 +216,12 @@ class OrderListTableViewController: UITableViewController {
                         print(error.localizedDescription)
                     }
                 })
+            } else {
+                
+                let alert = UIAlertController(title: "You can not push the item!", message: "", preferredStyle: UIAlertController.Style.alert)
+                let okaction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okaction)
+                self.present(alert, animated: true, completion: nil)
             }
             
             completion(true)

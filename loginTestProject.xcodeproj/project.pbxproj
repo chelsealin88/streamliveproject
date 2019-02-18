@@ -17,6 +17,10 @@
 		5E518C0222153E8A00BACA55 /* DeleteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E518C0122153E8A00BACA55 /* DeleteItem.swift */; };
 		5EC24CF52217ABFE001019C3 /* StartLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24CF42217ABFE001019C3 /* StartLive.swift */; };
 		5EC24CF7221A3E19001019C3 /* PushItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24CF6221A3E19001019C3 /* PushItem.swift */; };
+		5EC24CF9221A60E0001019C3 /* LiveHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24CF8221A60E0001019C3 /* LiveHistory.swift */; };
+		5EC24CFB221A8274001019C3 /* LiveHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24CFA221A8274001019C3 /* LiveHistoryTableViewController.swift */; };
+		5EC24D03221A87F6001019C3 /* LiveHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24D01221A87F6001019C3 /* LiveHistoryTableViewCell.swift */; };
+		5EC24D04221A87F6001019C3 /* LiveHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC24D02221A87F6001019C3 /* LiveHistoryTableViewCell.xib */; };
 		5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */; };
 		5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */; };
 		5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3323721FFFEAE008B62B9 /* animation.swift */; };
@@ -40,6 +44,10 @@
 		5E518C0122153E8A00BACA55 /* DeleteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItem.swift; sourceTree = "<group>"; };
 		5EC24CF42217ABFE001019C3 /* StartLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLive.swift; sourceTree = "<group>"; };
 		5EC24CF6221A3E19001019C3 /* PushItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushItem.swift; sourceTree = "<group>"; };
+		5EC24CF8221A60E0001019C3 /* LiveHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveHistory.swift; sourceTree = "<group>"; };
+		5EC24CFA221A8274001019C3 /* LiveHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveHistoryTableViewController.swift; sourceTree = "<group>"; };
+		5EC24D01221A87F6001019C3 /* LiveHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		5EC24D02221A87F6001019C3 /* LiveHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
 		5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
 		5EF3323721FFFEAE008B62B9 /* animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
@@ -82,6 +90,7 @@
 				5EFAAE4E22115C1800E4533F /* OrderListTableViewController.swift */,
 				5EFAAE5222115CD200E4533F /* OrderTableViewCell.swift */,
 				5EFAAE5322115CD200E4533F /* OrderTableViewCell.xib */,
+				5EC24D05221A9A01001019C3 /* LiveHistory */,
 			);
 			path = sellerAddProduct;
 			sourceTree = "<group>";
@@ -120,6 +129,16 @@
 			path = loginTestProject;
 			sourceTree = "<group>";
 		};
+		5EC24D05221A9A01001019C3 /* LiveHistory */ = {
+			isa = PBXGroup;
+			children = (
+				5EC24CFA221A8274001019C3 /* LiveHistoryTableViewController.swift */,
+				5EC24D01221A87F6001019C3 /* LiveHistoryTableViewCell.swift */,
+				5EC24D02221A87F6001019C3 /* LiveHistoryTableViewCell.xib */,
+			);
+			path = LiveHistory;
+			sourceTree = "<group>";
+		};
 		5ECFA39C21F844F7006CC9A9 /* buyerInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +157,7 @@
 				5E518C0122153E8A00BACA55 /* DeleteItem.swift */,
 				5EFAAE582213F5B600E4533F /* GetItems.swift */,
 				5EC24CF42217ABFE001019C3 /* StartLive.swift */,
+				5EC24CF8221A60E0001019C3 /* LiveHistory.swift */,
 				5E1621DA220432C6008C842C /* sellerAddProduct */,
 			);
 			name = model;
@@ -216,6 +236,7 @@
 				5E4DBC0A21F011D0006D3612 /* Assets.xcassets in Resources */,
 				5EFAAE5522115CD200E4533F /* OrderTableViewCell.xib in Resources */,
 				5E4DBC0821F011CE006D3612 /* Main.storyboard in Resources */,
+				5EC24D04221A87F6001019C3 /* LiveHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,10 +315,13 @@
 				5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */,
 				5EC24CF52217ABFE001019C3 /* StartLive.swift in Sources */,
 				5EF3327822002F82008B62B9 /* UserInfoViewController.swift in Sources */,
+				5EC24D03221A87F6001019C3 /* LiveHistoryTableViewCell.swift in Sources */,
 				5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */,
 				5EC24CF7221A3E19001019C3 /* PushItem.swift in Sources */,
 				5E1621DE2204360A008C842C /* AddProductViewController.swift in Sources */,
+				5EC24CF9221A60E0001019C3 /* LiveHistory.swift in Sources */,
 				5EFAAE5022115C1800E4533F /* OrderListTableViewController.swift in Sources */,
+				5EC24CFB221A8274001019C3 /* LiveHistoryTableViewController.swift in Sources */,
 				5E518C0222153E8A00BACA55 /* DeleteItem.swift in Sources */,
 				5EFAAE592213F5B600E4533F /* GetItems.swift in Sources */,
 				5EFAAE57221279B800E4533F /* SaveItem.swift in Sources */,
