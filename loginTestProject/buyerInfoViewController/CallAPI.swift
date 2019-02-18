@@ -70,7 +70,7 @@ struct Request {
     /**************** GET API ****************/
 
     
-    static func getAPI(api: String, header: [String:String], callBack: @escaping (Data) -> Void) {
+    static func getAPI(api: String, header: [String:String], callBack: @escaping (_ data: Data, _ statusCode: Int) -> Void) {
         
         let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api)
         var request = URLRequest(url: url!)
@@ -85,17 +85,18 @@ struct Request {
                 print(error?.localizedDescription)
                 return
             }
+            guard let httpResponse = respones as? HTTPURLResponse else { return }
          
-            callBack(data)
-            
+            callBack(data,httpResponse.statusCode)
         }
+        
         task.resume()
         
     }
     
     /**************** PUT API ****************/
 
-    static func PutAPI(api: String, header: [String: String], _ callBack: @escaping (Data) -> Void) {
+    static func PutAPI(api: String, header: [String: String], _ callBack: @escaping (_ statusCode: Int, _ dat: Data) -> Void) {
         
         guard let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api) else { return }
         var request = URLRequest(url: url)
@@ -110,7 +111,7 @@ struct Request {
             guard let httpResponse = response as? HTTPURLResponse else { return }
             guard let data = data else { return }
             
-            callBack(data)
+            callBack(httpResponse.statusCode, data)
         }
         
         task.resume()

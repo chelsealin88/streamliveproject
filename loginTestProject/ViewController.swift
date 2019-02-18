@@ -107,11 +107,11 @@ class ViewController: UIViewController {
         }
         
         
-        Request.getAPI(api: "/users", header: Header.init(token: userToken).header) { (callBack) in
+        Request.getAPI(api: "/users", header: Header.init(token: userToken).header) { (data, statusCode) in
             DispatchQueue.main.async {
                 
                 do {
-                    let json = try JSON(data: callBack)
+                    let json = try JSON(data: data)
                     print("test have usertoken")
                     guard json["result"].bool! else {
                         self.myactivityAnimation.stopAnimation()

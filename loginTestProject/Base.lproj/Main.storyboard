@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="2852" y="89.505247376311857"/>
         </scene>
-        <!--Order List Table View Controller-->
+        <!--Channel Token-->
         <scene sceneID="0qw-QS-Cu9">
             <objects>
                 <tableViewController id="ikM-qQ-Bqr" customClass="OrderListTableViewController" customModule="loginTestProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,7 +139,7 @@
                             <outlet property="delegate" destination="ikM-qQ-Bqr" id="yM2-0N-vNF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TB1-s0-sgn">
+                    <navigationItem key="navigationItem" title="Channel Token" id="TB1-s0-sgn">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="play" id="EtC-g8-goA">
                                 <color key="tintColor" red="0.57842874529999999" green="0.034700421840000002" blue="0.044664306119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -155,6 +155,10 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="startLiveButton" destination="EtC-g8-goA" id="ebE-0Q-L5a"/>
+                        <outlet property="stopLiveButton" destination="dOG-Bk-1Gk" id="YJb-I7-OWx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6D-eU-WBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,6 +199,12 @@
                     <view key="view" contentMode="scaleToFill" id="aIw-4a-89Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHm-q5-V1S">
+                                <rect key="frame" x="0.0" y="64" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TXc-GC-U7p"/>
                     </view>

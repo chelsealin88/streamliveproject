@@ -11,7 +11,7 @@ import SwiftyJSON
 
 struct DeleteItem {
     
-    func deleteProduct(_ id: Int, _ header: [String: String], callBack: @escaping(Data) -> Void) {
+    func deleteProduct(_ id: Int, _ header: [String: String], callBack: @escaping(_ result: Bool) -> Void) {
         
         
         let body = ["items": [id]]
@@ -20,8 +20,9 @@ struct DeleteItem {
             
             do {
                 let json = try JSON(data: data)
-                guard let jsonResult = json["result"].string else { return }
-                guard let jsonResponse = json["response"].string else { return }
+                guard let jsonResult = json["result"].bool else { return }
+//                guard let jsonResponse = json["response"].string else { return }
+                callBack(jsonResult)
                 
             } catch {
                 print(error.localizedDescription)
