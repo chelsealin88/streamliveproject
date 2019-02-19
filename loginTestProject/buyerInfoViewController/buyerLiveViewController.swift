@@ -1,28 +1,19 @@
 //
-//  IdentityViewController.swift
+//  buyerLiveViewController.swift
 //  loginTestProject
 //
-//  Created by chelsea lin on 2019/1/22.
+//  Created by chelsea lin on 2019/2/19.
 //  Copyright © 2019 chelsea lin. All rights reserved.
 //
 
 import UIKit
-import FacebookCore
-import FacebookLogin
 
-class IdentityViewController: UIViewController {
+class buyerLiveViewController: UIViewController {
 
-    @IBOutlet weak var logoutButton: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func logoutButton(_ sender: Any) {
-        
-        let loginManager = LoginManager()
-        loginManager.logOut()
-        self.dismiss(animated: true, completion: nil)
+
+        // Do any additional setup after loading the view.
     }
     
 

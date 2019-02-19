@@ -21,8 +21,13 @@
 		5EC24CFB221A8274001019C3 /* LiveHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24CFA221A8274001019C3 /* LiveHistoryTableViewController.swift */; };
 		5EC24D03221A87F6001019C3 /* LiveHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24D01221A87F6001019C3 /* LiveHistoryTableViewCell.swift */; };
 		5EC24D04221A87F6001019C3 /* LiveHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC24D02221A87F6001019C3 /* LiveHistoryTableViewCell.xib */; };
+		5EC24D07221BA18A001019C3 /* JoinChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24D06221BA18A001019C3 /* JoinChannel.swift */; };
+		5EC24D0D221BED57001019C3 /* buyerLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24D0C221BED57001019C3 /* buyerLiveViewController.swift */; };
+		5EC24D0F221BEE4B001019C3 /* StoryBoardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24D0E221BEE4B001019C3 /* StoryBoardID.swift */; };
 		5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */; };
 		5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */; };
+		5EDB3F34221BFF79007D15D9 /* StreamingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */; };
+		5EDB3F37221C2A56007D15D9 /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */; };
 		5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3323721FFFEAE008B62B9 /* animation.swift */; };
 		5EF3327822002F82008B62B9 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3327722002F82008B62B9 /* UserInfoViewController.swift */; };
 		5EFAAE5022115C1800E4533F /* OrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAAE4E22115C1800E4533F /* OrderListTableViewController.swift */; };
@@ -48,8 +53,13 @@
 		5EC24CFA221A8274001019C3 /* LiveHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveHistoryTableViewController.swift; sourceTree = "<group>"; };
 		5EC24D01221A87F6001019C3 /* LiveHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		5EC24D02221A87F6001019C3 /* LiveHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		5EC24D06221BA18A001019C3 /* JoinChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinChannel.swift; sourceTree = "<group>"; };
+		5EC24D0C221BED57001019C3 /* buyerLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buyerLiveViewController.swift; sourceTree = "<group>"; };
+		5EC24D0E221BEE4B001019C3 /* StoryBoardID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardID.swift; sourceTree = "<group>"; };
 		5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
 		5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
+		5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingItem.swift; sourceTree = "<group>"; };
+		5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
 		5EF3323721FFFEAE008B62B9 /* animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
 		5EF3327722002F82008B62B9 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		5EFAAE4E22115C1800E4533F /* OrderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewController.swift; sourceTree = "<group>"; };
@@ -142,15 +152,27 @@
 		5ECFA39C21F844F7006CC9A9 /* buyerInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */,
 				5EF3327722002F82008B62B9 /* UserInfoViewController.swift */,
+				5EC24D0C221BED57001019C3 /* buyerLiveViewController.swift */,
 			);
 			path = buyerInfoViewController;
+			sourceTree = "<group>";
+		};
+		5EDB3F35221BFF81007D15D9 /* buyermodel */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */,
+				5EC24D06221BA18A001019C3 /* JoinChannel.swift */,
+				5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */,
+			);
+			path = buyermodel;
 			sourceTree = "<group>";
 		};
 		5EF3323621FFFBCF008B62B9 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				5EC24D0E221BEE4B001019C3 /* StoryBoardID.swift */,
+				5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */,
 				5EF3323721FFFEAE008B62B9 /* animation.swift */,
 				5EC24CF6221A3E19001019C3 /* PushItem.swift */,
 				5EFAAE56221279B800E4533F /* SaveItem.swift */,
@@ -158,6 +180,7 @@
 				5EFAAE582213F5B600E4533F /* GetItems.swift */,
 				5EC24CF42217ABFE001019C3 /* StartLive.swift */,
 				5EC24CF8221A60E0001019C3 /* LiveHistory.swift */,
+				5EDB3F35221BFF81007D15D9 /* buyermodel */,
 				5E1621DA220432C6008C842C /* sellerAddProduct */,
 			);
 			name = model;
@@ -314,7 +337,11 @@
 			files = (
 				5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */,
 				5EC24CF52217ABFE001019C3 /* StartLive.swift in Sources */,
+				5EDB3F34221BFF79007D15D9 /* StreamingItem.swift in Sources */,
 				5EF3327822002F82008B62B9 /* UserInfoViewController.swift in Sources */,
+				5EC24D0F221BEE4B001019C3 /* StoryBoardID.swift in Sources */,
+				5EC24D07221BA18A001019C3 /* JoinChannel.swift in Sources */,
+				5EDB3F37221C2A56007D15D9 /* PlaceOrder.swift in Sources */,
 				5EC24D03221A87F6001019C3 /* LiveHistoryTableViewCell.swift in Sources */,
 				5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */,
 				5EC24CF7221A3E19001019C3 /* PushItem.swift in Sources */,
@@ -327,6 +354,7 @@
 				5EFAAE57221279B800E4533F /* SaveItem.swift in Sources */,
 				5E4DBC0521F011CE006D3612 /* ViewController.swift in Sources */,
 				5EFAAE5422115CD200E4533F /* OrderTableViewCell.swift in Sources */,
+				5EC24D0D221BED57001019C3 /* buyerLiveViewController.swift in Sources */,
 				5E4DBC0321F011CE006D3612 /* AppDelegate.swift in Sources */,
 				5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */,
 			);

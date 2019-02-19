@@ -110,19 +110,7 @@ struct SaveItems {
 //}
 //
 //
-//extension String {
-//    func downloadImage() -> UIImage? {
-//        guard let imageURL = URL(string: self) else { return nil }
-//        do {
-//            let imageData = try Data(contentsOf: imageURL)
-//            guard let image = UIImage(data: imageData) else { return nil }
-//            return image
-//        } catch {
-//            print(error.localizedDescription)
-//            return nil
-//        }
-//    }
-//}
+
 //
 //struct MyData {
 //    let name: String

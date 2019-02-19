@@ -96,7 +96,7 @@ struct Request {
     
     /**************** PUT API ****************/
 
-    static func PutAPI(api: String, header: [String: String], _ callBack: @escaping (_ statusCode: Int, _ dat: Data) -> Void) {
+    static func putAPI(api: String, header: [String: String], _ callBack: @escaping (_ statusCode: Int, _ dat: Data) -> Void) {
         
         guard let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api) else { return }
         var request = URLRequest(url: url)
@@ -142,6 +142,32 @@ struct Request {
         }
         task.resume()
     }
+    
+    /**************** PATCH API ****************/
+    
+    static func patchApi(_ api: String, _ header: [String:String], _ body: [String:String], _ callback: @escaping (_ data: Data, _ statusCode: Int) -> Void) {
+        
+        guard let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        let httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+        request.httpBody = httpBody
+        
+        for (key, value) in header {
+            request.addValue(value, forHTTPHeaderField: key)
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else { return }
+            guard let httpResponse =  response as? HTTPURLResponse else { return }
+            guard let data = data else { return }
+            callback(data, httpResponse.statusCode)
+        }
+        
+        task.resume()
+        
+    }
+
 }
 
 

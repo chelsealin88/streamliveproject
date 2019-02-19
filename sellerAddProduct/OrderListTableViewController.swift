@@ -83,7 +83,7 @@ class OrderListTableViewController: UITableViewController {
 
         let okAction = UIAlertAction(title: "Confirm", style: .default) { (actionAlert) in
             
-            Request.PutAPI(api: "/users-channel-id", header: self.header, { (statusCode, data) in
+            Request.putAPI(api: "/users-channel-id", header: self.header, { (statusCode, data) in
                 
                 if statusCode == 200 {
                     DispatchQueue.main.async {

@@ -15,6 +15,7 @@ import NVActivityIndicatorView
 
 class ViewController: UIViewController {
     
+   
     let userDefault = UserDefaults.standard
     let myactivityAnimation = MyActivityIndicator()
     let toIdentityVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IdentityViewController")
@@ -108,6 +109,9 @@ class ViewController: UIViewController {
         
         
         Request.getAPI(api: "/users", header: Header.init(token: userToken).header) { (data, statusCode) in
+            
+            
+            
             DispatchQueue.main.async {
                 
                 do {
