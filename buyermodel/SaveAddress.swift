@@ -11,7 +11,7 @@ import SwiftyJSON
 
 struct SaveAddress {
     
-    static func uploadAddress(_ header: [String:String], body:[String:Any] , _ name: String, _ phoneCode: String, _ phoneNumber: String, _ countryCode: String, _ postCode: String, _ city: String, _ district: String, _ otherAddress: String, _ callback: @escaping (_ data: Data, _ statusCode: Int) -> Void) {
+    static func uploadAddress(_ header: [String:String], body:[String:Any], _ callback: @escaping (_ data: Data, _ statusCode: Int) -> Void) {
         
         Request.postAPI(api: "/recipients", header: header, body) { (data, statusCode) in
             if statusCode == 200 {
@@ -26,6 +26,12 @@ struct SaveAddress {
                     
                     print(error.localizedDescription)
                     
+                }
+            } else {
+                do {
+                    let json = try JSON(data: data)
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
         }

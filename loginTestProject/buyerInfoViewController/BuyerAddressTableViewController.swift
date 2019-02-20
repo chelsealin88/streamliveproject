@@ -81,18 +81,18 @@ extension BuyerAddressTableViewController {
             if statusCode == 200 {
                 do {
                     let json = try JSON(data: data)
-                    guard let response = json["reponse"].array else { return }
+                    guard let response = json["response"].array else { return }
                     
                     for address in response {
                         guard let id = address["recipient_id"].int else { return }
                         guard let name = address["name"].string else { return }
-                        guard let phoneCode = address["phone_code"].string else { return }
-                        guard let phoneNumber = address["phone_number"].string else { return }
-                        guard let countryCode = address["country_code"].string else { return }
-                        guard let postCode = address["post_code"].string else { return }
-                        guard let city = address["city"].string else { return }
-                        guard let district = address["district"].string else { return }
-                        guard let others = address["others"].string else { return }
+                        guard let phoneCode = address["phone"]["phone_code"].string else { return }
+                        guard let phoneNumber = address["phone"]["phone_number"].string else { return }
+                        guard let countryCode = address["address"]["country_code"].string else { return }
+                        guard let postCode = address["address"]["post_code"].string else { return }
+                        guard let city = address["address"]["city"].string else { return }
+                        guard let district = address["address"]["district"].string else { return }
+                        guard let others = address["address"]["others"].string else { return }
                         
                         arrayData.append(AddressData.init(id: id, name: name, phoneCode: phoneCode, phoneNumber: phoneNumber, countrycode: countryCode, postcode: postCode, city: city, district: district, others: others))
                     

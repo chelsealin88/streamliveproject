@@ -11,3 +11,5 @@ import UIKit
 
 let buyerLive = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "buyerLive")
 
+let addAddress = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addAddress")
+

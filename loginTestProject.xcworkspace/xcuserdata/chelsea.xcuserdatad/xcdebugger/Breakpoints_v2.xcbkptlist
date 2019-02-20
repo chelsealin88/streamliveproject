@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "loginTestProject/buyerInfoViewController/BuyerAddressTableViewController.swift"
+            timestampString = "572366146.372925"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getAddress(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "loginTestProject.BuyerAddressTableViewController.getAddress((Swift.Array&lt;loginTestProject.AddressData&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "loginTestProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chelsea/Desktop/Xcode/Test%20Project/loginTestProject/loginTestProject/buyerInfoViewController/BuyerAddressTableViewController.swift"
+                  timestampString = "572366146.671502"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data, Swift.Int) -&gt; () in loginTestProject.BuyerAddressTableViewController.getAddress((Swift.Array&lt;loginTestProject.AddressData&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "loginTestProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chelsea/Desktop/Xcode/Test%20Project/loginTestProject/loginTestProject/buyerInfoViewController/BuyerAddressTableViewController.swift"
+                  timestampString = "572366146.683064"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "loginTestProject/buyerInfoViewController/BuyerAddressTableViewController.swift"
+            timestampString = "572366146.373787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "getAddress(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -26,7 +26,7 @@ class buyerLiveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+//        self.navigationItem.hidesBackButton = true
 //        let leaveButton = UIBarButtonItem(title: "Leave", style: UIBarButtonItem, target: self, action: #selector(leaveButton())
 //        self.navigationItem.leftBarButtonItem = leaveButton
 
