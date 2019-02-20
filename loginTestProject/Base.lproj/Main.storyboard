@@ -615,17 +615,21 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EA6-qe-Igr">
-                                <rect key="frame" x="97.5" y="307.5" width="180.5" height="52"/>
+                                <rect key="frame" x="97.5" y="305.5" width="180.5" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Token  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHP-Ty-TGj">
-                                        <rect key="frame" x="0.0" y="0.0" width="180.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180.5" height="24"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-Ev-vDr">
-                                        <rect key="frame" x="0.0" y="30" width="180.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="32" width="180.5" height="24"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180.5" id="CXg-L7-2Tx"/>
+                                            <constraint firstAttribute="height" constant="24" id="Tsx-lV-G0L"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -717,11 +721,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gx-6C-GIu">
-                                <rect key="frame" x="309" y="30" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Leave" image="exit"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-Ab-YXr">
                                 <rect key="frame" x="37" y="88" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -883,7 +882,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="exit" width="512" height="512"/>
         <image name="facebook icon" width="512" height="512"/>
         <image name="icons8-camera_filled" width="100" height="100"/>
     </resources>
