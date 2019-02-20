@@ -721,66 +721,137 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-Ab-YXr">
-                                <rect key="frame" x="37" y="88" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buy" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-Ab-YXr">
+                                <rect key="frame" x="25" y="100" width="325" height="194"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjc-NG-Dnf">
                                 <rect key="frame" x="50" y="612" width="275" height="35"/>
                                 <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="WVP-f3-92S"/>
+                                    <constraint firstAttribute="height" constant="35" id="YN4-HV-68Z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="23"/>
                                 <state key="normal" title="Buy">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="buyButton:" destination="UvU-QO-Xb5" eventType="touchUpInside" id="zEC-mO-cfV"/>
                                     <action selector="confirmButton:" destination="KqD-Vu-GTJ" eventType="touchUpInside" id="E1E-1w-nnB"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QGI-jW-Hm3">
-                                <rect key="frame" x="37" y="422" width="113.5" height="142.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FQh-oF-327">
+                                <rect key="frame" x="50" y="369" width="289.5" height="142.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEl-Sh-eot">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="289.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QV3-zj-mym">
-                                        <rect key="frame" x="0.0" y="30.5" width="88" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="289.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-zO-SzA">
-                                        <rect key="frame" x="0.0" y="61" width="39" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="181" translatesAutoresizingMaskIntoConstraints="NO" id="ySi-kY-Pf4">
+                                        <rect key="frame" x="0.0" y="61" width="289.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-zO-SzA">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uy-CT-tUo">
+                                                <rect key="frame" x="220" y="0.0" width="69.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="r38-kr-E8A">
+                                        <rect key="frame" x="0.0" y="91.5" width="289.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Remaining Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d62-bG-hvV">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-vm-YcA">
+                                                <rect key="frame" x="238" y="0.0" width="51.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="tyE-zr-DcM">
+                                        <rect key="frame" x="0.0" y="122" width="289.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sold Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-sS-8Lt">
+                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wga-zx-bST">
+                                                <rect key="frame" x="258.5" y="0.0" width="31" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSN-yq-QpJ">
+                                <rect key="frame" x="185" y="579" width="153" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOU-i9-hAf">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sell Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d62-bG-hvV">
-                                        <rect key="frame" x="0.0" y="91.5" width="97" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-sS-8Lt">
-                                        <rect key="frame" x="0.0" y="122" width="113.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kwT-KY-WqL">
+                                        <rect key="frame" x="59" y="0.0" width="94" height="29"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stepper:" destination="UvU-QO-Xb5" eventType="valueChanged" id="nEm-bV-cnz"/>
+                                        </connections>
+                                    </stepper>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.97226065399999995" green="0.95734566450000003" blue="0.91764956710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="vI3-nc-FAt" firstAttribute="trailing" secondItem="xjc-NG-Dnf" secondAttribute="trailing" constant="50" id="5AA-uK-lkd"/>
+                            <constraint firstItem="bWg-Ab-YXr" firstAttribute="leading" secondItem="vI3-nc-FAt" secondAttribute="leading" constant="25" id="CaX-Yc-UBW"/>
                             <constraint firstItem="xjc-NG-Dnf" firstAttribute="leading" secondItem="vI3-nc-FAt" secondAttribute="leading" constant="50" id="F4a-9d-LD6"/>
+                            <constraint firstItem="vI3-nc-FAt" firstAttribute="trailing" secondItem="bWg-Ab-YXr" secondAttribute="trailing" constant="25" id="els-Nz-2dr"/>
                             <constraint firstItem="vI3-nc-FAt" firstAttribute="bottom" secondItem="xjc-NG-Dnf" secondAttribute="bottom" constant="20" id="fBt-Ws-3a3"/>
+                            <constraint firstItem="bWg-Ab-YXr" firstAttribute="top" secondItem="vI3-nc-FAt" secondAttribute="top" constant="80" id="uBl-Va-SuC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vI3-nc-FAt"/>
                     </view>
+                    <connections>
+                        <outlet property="description" destination="QV3-zj-mym" id="jAQ-Ah-n74"/>
+                        <outlet property="descriptionLabel" destination="QV3-zj-mym" id="dzD-w2-kJU"/>
+                        <outlet property="image" destination="bWg-Ab-YXr" id="xek-y2-iav"/>
+                        <outlet property="nameLabel" destination="bEl-Sh-eot" id="vCQ-0S-cef"/>
+                        <outlet property="priceLabel" destination="3uy-CT-tUo" id="9Xl-FD-OlU"/>
+                        <outlet property="quantityLabel" destination="oOU-i9-hAf" id="M7S-1D-Lgy"/>
+                        <outlet property="rqLabel" destination="qCu-vm-YcA" id="hLh-Zh-n1r"/>
+                        <outlet property="sqLabel" destination="wga-zx-bST" id="4yY-kT-pF1"/>
+                        <outlet property="stepper" destination="kwT-KY-WqL" id="P1f-aM-xNa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPd-WD-iI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -882,6 +953,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buy" width="259" height="194"/>
         <image name="facebook icon" width="512" height="512"/>
         <image name="icons8-camera_filled" width="100" height="100"/>
     </resources>
