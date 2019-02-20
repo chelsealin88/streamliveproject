@@ -33,10 +33,17 @@ class buyerLiveViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        reloadProduct(&self.timer, self, 3)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+    }
+    
     @IBAction func stepper(_ sender: UIStepper) {
         
         quantityLabel.text = "\(Int(sender.value))"
+        
     }
     
     @IBAction func buyButton(_ sender: Any) {
@@ -45,17 +52,26 @@ class buyerLiveViewController: UIViewController {
     
     func reloadProduct(_ timer: inout Timer?, _ viewController: UIViewController, _ timeInterval: TimeInterval) {
         
-        timer = Timer.init(timeInterval: timeInterval, target: viewController, selector: #selector(buyerGetItem), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: viewController, selector: #selector(buyerGetItem), userInfo: nil, repeats: true)
 
     }
     
-    func buyerGetItem() {
+    @objc func buyerGetItem() {
         
         getStreamItem.getStreamItems("/streaming-items", header) { (streamItemData, statusCode) in
-            self.nameLabel.text = streamItemData.name
+            
+            DispatchQueue.main.async {
+                self.nameLabel.text = streamItemData.name
+                self.descriptionLabel.text = streamItemData.description
+                self.priceLabel.text = "\(streamItemData.price)"
+                self.rqLabel.text = "\(streamItemData.rq)"
+                self.sqLabel.text = "\(streamItemData.sq)"
+                self.image.image = streamItemData.image
+            }
+           
         }
         
-    }
+}
     
     /*
     // MARK: - Navigation

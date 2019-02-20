@@ -11,14 +11,14 @@ import SwiftyJSON
 
 struct getStreamItem {
     
-    static func getStreamItems(_ api: String, _ header: [String:String], _ callback: @escaping (_ StreamItemData: StreamItemData, _ statusCode: Int)-> Void) {
+    static func getStreamItems(_ api: String, _ header: [String:String], _ callback: @escaping (_ StreamItem: StreamItemData, _ statusCode: Int)-> Void) {
         
         Request.getAPI(api: "/streaming-items", header: header) { (data, statusCode) in
             if statusCode == 200 {
                 do {
                     let json = try JSON(data: data)
-                    var itemdescription: String?
-                    var itemimage: UIImage?
+                    var itemdescription = String()
+                    var itemimage = UIImage()
                     
                     guard let response = json["response"].dictionary else { return }
                     guard let id = json["response"]["item_id"].int else { return }
@@ -29,15 +29,20 @@ struct getStreamItem {
                     if let description = json["response"]["description"].string {
                         itemdescription = description
                     } else {
-                        itemdescription = nil
+                        itemdescription = ""
                     }
-                    if let image = json["response"]["image"].string {
-                        itemimage = image.downloadImage()!
+                    if let imageUrl = json["response"]["image"].string {
+                        if let image = imageUrl.downloadImage() {
+                            itemimage = image
+                        } else {
+                            itemimage = UIImage(named: "buy")!
+                        }
                     } else {
-                        itemimage = nil
+                        itemimage = UIImage(named: "buy")!
                     }
+                    let streamItem = StreamItemData.init(id: id, name: name, description: itemdescription, price: price, image: itemimage, rq: rq, sq: sq)
                     
-                    
+                    callback(streamItem, statusCode)
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -49,17 +54,18 @@ struct getStreamItem {
         
     }
     
-    struct  StreamItemData {
-        
-        let id: Int
-        let name: String
-        let description: String?
-        let price: Int
-        let image: UIImage?
-        let rq: Int
-        let sq: Int
-        
+    
+
+
 }
-
-
+struct  StreamItemData {
+    
+    let id: Int
+    let name: String
+    let description: String?
+    let price: Int
+    let image: UIImage?
+    let rq: Int
+    let sq: Int
+    
 }

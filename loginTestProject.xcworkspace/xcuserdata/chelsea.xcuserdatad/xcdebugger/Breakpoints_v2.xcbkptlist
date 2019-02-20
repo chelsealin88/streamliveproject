@@ -2,4 +2,150 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "loginTestProject/buyerInfoViewController/buyerLiveViewController.swift"
+            timestampString = "572336737.420507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "buyerGetItem()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "buyermodel/StreamingItem.swift"
+            timestampString = "572336737.420815"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getStreamItems(_:_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static loginTestProject.getStreamItem.getStreamItems(Swift.String, Swift.Dictionary&lt;Swift.String, Swift.String&gt;, (loginTestProject.StreamItemData, Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "loginTestProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chelsea/Desktop/Xcode/Test%20Project/loginTestProject/buyermodel/StreamingItem.swift"
+                  timestampString = "572335886.2017"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data, Swift.Int) -&gt; () in static loginTestProject.getStreamItem.getStreamItems(Swift.String, Swift.Dictionary&lt;Swift.String, Swift.String&gt;, (loginTestProject.StreamItemData, Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "loginTestProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chelsea/Desktop/Xcode/Test%20Project/loginTestProject/buyermodel/StreamingItem.swift"
+                  timestampString = "572335886.2085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "174">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "loginTestProject/buyerInfoViewController/buyerLiveViewController.swift"
+            timestampString = "572336737.4210171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "buyerGetItem()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "loginTestProject.buyerLiveViewController.buyerGetItem() -&gt; ()"
+                  moduleName = "loginTestProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chelsea/Desktop/Xcode/Test%20Project/loginTestProject/loginTestProject/buyerInfoViewController/buyerLiveViewController.swift"
+                  timestampString = "572335743.851517"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (loginTestProject.StreamItemData, Swift.Int) -&gt; () in loginTestProject.buyerLiveViewController.buyerGetItem() -&gt; ()"
+                  moduleName = "loginTestProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chelsea/Desktop/Xcode/Test%20Project/loginTestProject/loginTestProject/buyerInfoViewController/buyerLiveViewController.swift"
+                  timestampString = "572335743.853889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "loginTestProject/buyerInfoViewController/buyerLiveViewController.swift"
+            timestampString = "572336737.421066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "loginTestProject/buyerInfoViewController/buyerLiveViewController.swift"
+            timestampString = "572336737.421106"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "reloadProduct(_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
