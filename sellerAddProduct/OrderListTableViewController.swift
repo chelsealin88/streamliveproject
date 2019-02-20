@@ -35,13 +35,14 @@ class OrderListTableViewController: UITableViewController {
     
     @IBAction func startLiveButton(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Start your Live Steam", message: "please type your Channel ID and Token", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Start your Live Steam", message:
+            "please type your iFrame and Channle Description", preferredStyle: .alert)
         
         alert.addTextField { (textfield) in
-            textfield.placeholder = "Channel ID"
+            textfield.placeholder = "iFrame"
         }
         alert.addTextField { (textfield) in
-            textfield.placeholder = "Channel token"
+            textfield.placeholder = "Channel Description"
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)

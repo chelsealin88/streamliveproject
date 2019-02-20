@@ -27,13 +27,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc4-3i-g2E">
                                 <rect key="frame" x="0.0" y="0.0" width="168.5" height="36.5"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68l-bd-ljY">
                                 <rect key="frame" x="0.0" y="36.5" width="168.5" height="36.5"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -41,14 +41,14 @@
                                 <rect key="frame" x="0.0" y="73" width="168.5" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shl-0v-8hw">
-                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="37"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iFQ-vN-5jb">
-                                        <rect key="frame" x="114" y="0.0" width="54.5" height="37"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <rect key="frame" x="116.5" y="0.0" width="52" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -58,14 +58,14 @@
                                 <rect key="frame" x="0.0" y="110" width="168.5" height="36.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSB-q9-G4z">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="36.5"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46.5" height="36.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jiz-8F-20f">
                                         <rect key="frame" x="146.5" y="0.0" width="22" height="36.5"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -75,14 +75,14 @@
                                 <rect key="frame" x="0.0" y="146.5" width="168.5" height="36.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEc-z2-XnS">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="36.5"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="36.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Be-Fx-Eji">
-                                        <rect key="frame" x="146.5" y="0.0" width="22" height="36.5"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <rect key="frame" x="147" y="0.0" width="21.5" height="36.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>

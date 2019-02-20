@@ -26,6 +26,14 @@
 		5EC24D0F221BEE4B001019C3 /* StoryBoardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC24D0E221BEE4B001019C3 /* StoryBoardID.swift */; };
 		5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */; };
 		5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */; };
+		5ECFCDD0221D324700C427F8 /* leaveStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDCF221D324700C427F8 /* leaveStream.swift */; };
+		5ECFCDD4221D3C0000C427F8 /* SaveAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDD3221D3C0000C427F8 /* SaveAddress.swift */; };
+		5ECFCDD6221D54BB00C427F8 /* SaveAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDD5221D54BB00C427F8 /* SaveAddressTableViewController.swift */; };
+		5ECFCDD8221D7D5900C427F8 /* GetTaiwanPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDD7221D7D5900C427F8 /* GetTaiwanPostcode.swift */; };
+		5ECFCDDC221D7E0C00C427F8 /* GetBuyerAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDDB221D7E0C00C427F8 /* GetBuyerAddress.swift */; };
+		5ECFCDDE221D7FA900C427F8 /* BuyerAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDDD221D7FA900C427F8 /* BuyerAddressTableViewController.swift */; };
+		5ECFCDE1221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDDF221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift */; };
+		5ECFCDE2221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFCDE0221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib */; };
 		5EDB3F34221BFF79007D15D9 /* StreamingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */; };
 		5EDB3F37221C2A56007D15D9 /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */; };
 		5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3323721FFFEAE008B62B9 /* animation.swift */; };
@@ -58,6 +66,14 @@
 		5EC24D0E221BEE4B001019C3 /* StoryBoardID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardID.swift; sourceTree = "<group>"; };
 		5ECFA38B21F6AFCB006CC9A9 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
 		5ECFA39A21F70E4C006CC9A9 /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
+		5ECFCDCF221D324700C427F8 /* leaveStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leaveStream.swift; sourceTree = "<group>"; };
+		5ECFCDD3221D3C0000C427F8 /* SaveAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAddress.swift; sourceTree = "<group>"; };
+		5ECFCDD5221D54BB00C427F8 /* SaveAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAddressTableViewController.swift; sourceTree = "<group>"; };
+		5ECFCDD7221D7D5900C427F8 /* GetTaiwanPostcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaiwanPostcode.swift; sourceTree = "<group>"; };
+		5ECFCDDB221D7E0C00C427F8 /* GetBuyerAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBuyerAddress.swift; sourceTree = "<group>"; };
+		5ECFCDDD221D7FA900C427F8 /* BuyerAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerAddressTableViewController.swift; sourceTree = "<group>"; };
+		5ECFCDDF221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerAddressTableViewCell.swift; sourceTree = "<group>"; };
+		5ECFCDE0221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyerAddressTableViewCell.xib; sourceTree = "<group>"; };
 		5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingItem.swift; sourceTree = "<group>"; };
 		5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
 		5EF3323721FFFEAE008B62B9 /* animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
@@ -154,6 +170,10 @@
 			children = (
 				5EF3327722002F82008B62B9 /* UserInfoViewController.swift */,
 				5EC24D0C221BED57001019C3 /* buyerLiveViewController.swift */,
+				5ECFCDD5221D54BB00C427F8 /* SaveAddressTableViewController.swift */,
+				5ECFCDDD221D7FA900C427F8 /* BuyerAddressTableViewController.swift */,
+				5ECFCDDF221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift */,
+				5ECFCDE0221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib */,
 			);
 			path = buyerInfoViewController;
 			sourceTree = "<group>";
@@ -163,7 +183,11 @@
 			children = (
 				5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */,
 				5EC24D06221BA18A001019C3 /* JoinChannel.swift */,
+				5ECFCDD3221D3C0000C427F8 /* SaveAddress.swift */,
 				5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */,
+				5ECFCDCF221D324700C427F8 /* leaveStream.swift */,
+				5ECFCDDB221D7E0C00C427F8 /* GetBuyerAddress.swift */,
+				5ECFCDD7221D7D5900C427F8 /* GetTaiwanPostcode.swift */,
 			);
 			path = buyermodel;
 			sourceTree = "<group>";
@@ -255,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECFCDE2221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib in Resources */,
 				5E4DBC0D21F011D0006D3612 /* LaunchScreen.storyboard in Resources */,
 				5E4DBC0A21F011D0006D3612 /* Assets.xcassets in Resources */,
 				5EFAAE5522115CD200E4533F /* OrderTableViewCell.xib in Resources */,
@@ -335,15 +360,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECFCDDE221D7FA900C427F8 /* BuyerAddressTableViewController.swift in Sources */,
 				5ECFA39B21F70E4C006CC9A9 /* IdentityViewController.swift in Sources */,
+				5ECFCDD4221D3C0000C427F8 /* SaveAddress.swift in Sources */,
 				5EC24CF52217ABFE001019C3 /* StartLive.swift in Sources */,
+				5ECFCDD8221D7D5900C427F8 /* GetTaiwanPostcode.swift in Sources */,
 				5EDB3F34221BFF79007D15D9 /* StreamingItem.swift in Sources */,
 				5EF3327822002F82008B62B9 /* UserInfoViewController.swift in Sources */,
 				5EC24D0F221BEE4B001019C3 /* StoryBoardID.swift in Sources */,
 				5EC24D07221BA18A001019C3 /* JoinChannel.swift in Sources */,
+				5ECFCDE1221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift in Sources */,
 				5EDB3F37221C2A56007D15D9 /* PlaceOrder.swift in Sources */,
 				5EC24D03221A87F6001019C3 /* LiveHistoryTableViewCell.swift in Sources */,
 				5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */,
+				5ECFCDDC221D7E0C00C427F8 /* GetBuyerAddress.swift in Sources */,
 				5EC24CF7221A3E19001019C3 /* PushItem.swift in Sources */,
 				5E1621DE2204360A008C842C /* AddProductViewController.swift in Sources */,
 				5EC24CF9221A60E0001019C3 /* LiveHistory.swift in Sources */,
@@ -356,7 +386,9 @@
 				5EFAAE5422115CD200E4533F /* OrderTableViewCell.swift in Sources */,
 				5EC24D0D221BED57001019C3 /* buyerLiveViewController.swift in Sources */,
 				5E4DBC0321F011CE006D3612 /* AppDelegate.swift in Sources */,
+				5ECFCDD0221D324700C427F8 /* leaveStream.swift in Sources */,
 				5ECFA38C21F6AFCB006CC9A9 /* CallAPI.swift in Sources */,
+				5ECFCDD6221D54BB00C427F8 /* SaveAddressTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

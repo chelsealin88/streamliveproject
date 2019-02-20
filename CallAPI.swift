@@ -31,40 +31,46 @@ struct Header {
 
 struct Request {
     
-    static func postAPI(api: String, header: [String:String], _ body: [String: String], callBack: @escaping (_ data: Data, _ statusCode: Int) -> Void) {
+    static func postAPI(api: String, header: [String:String], _ body: [String: Any], callBack: @escaping (_ data: Data, _ statusCode: Int) -> Void) {
         
 //        let body : [String:String] = ["expirationDate": "\(expirationDate)"]
         
-        let jsonData = try? JSONEncoder().encode(body)
+//        let jsonData = try? JSONEncoder().encode(body)
         
         let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api" + api)
         var request = URLRequest(url: url!)
-        request.httpBody = jsonData
         request.httpMethod = "POST"
-        
-        for i in header {
-            request.addValue(i.value, forHTTPHeaderField: i.key)
-        }
-        //        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        //        request.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-        //        request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let data = data, error == nil else {
-                print(error?.localizedDescription)
-                return 
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: body, options: JSONSerialization.WritingOptions())
+            request.httpBody = jsonData
+            
+            for i in header {
+                request.addValue(i.value, forHTTPHeaderField: i.key)
             }
-            guard let httpResponse = response as? HTTPURLResponse else { return }
+            //        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            //        request.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
+            //        request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
             
-            callBack(data, httpResponse.statusCode)
-            
-            //        let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
-            //            if let jsonResponse = jsonResponse as? [String: Any]{
-            //                callBack(jsonResponse)
-            //            } 解析
-            
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription)
+                    return
+                }
+                guard let httpResponse = response as? HTTPURLResponse else { return }
+                
+                callBack(data, httpResponse.statusCode)
+                
+                //        let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: [])
+                //            if let jsonResponse = jsonResponse as? [String: Any]{
+                //                callBack(jsonResponse)
+                //            } 解析
+                
+            }
+            task.resume()
+        } catch {
+            print(error.localizedDescription)
         }
-        task.resume()
+        
     }
     
     /**************** GET API ****************/

@@ -26,14 +26,16 @@ class buyerLiveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.navigationItem.hidesBackButton = true
+//        let leaveButton = UIBarButtonItem(title: "Leave", style: UIBarButtonItem, target: self, action: #selector(leaveButton())
+//        self.navigationItem.leftBarButtonItem = leaveButton
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadProduct(&self.timer, self, 3)
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -56,6 +58,11 @@ class buyerLiveViewController: UIViewController {
 
     }
     
+//    @objc func leaveButton(_ sender : UIBarButtonItem) {
+//
+//        self.navigationController?.popViewController(animated: true)
+//    }
+//
     @objc func buyerGetItem() {
         
         getStreamItem.getStreamItems("/streaming-items", header) { (streamItemData, statusCode) in
