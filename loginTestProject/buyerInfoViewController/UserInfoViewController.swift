@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class UserInfoViewController: UIViewController {
+class UserInfoViewController: UIViewController, UITextFieldDelegate {
     
     
     let header = Header.init(token: UserDefaults.standard.value(forKey: UserDefaultKey.token.rawValue) as! String).header
@@ -23,13 +23,13 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var userMailLabel: UILabel!
-
     
-    //        override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //
-    //    } ViewDidLoad只會load一次
     
+            override func viewDidLoad() {
+            super.viewDidLoad()
+            channelTokenTextField.delegate = self
+    
+        }
     
     /*
      // MARK: - Navigation
@@ -84,24 +84,17 @@ class UserInfoViewController: UIViewController {
                 break
             }
             
-    
-//            do {
-//                let json = try JSON(data: data)
-//                guard let result = json["result"].bool else { return }
-//                guard let response = json["response"].string else { return }
-//            } catch {
-//                print(error.localizedDescription)
-//            }
             
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        
+        return false
+    }
     
 }
-
-
-
-
 
 
 
@@ -166,13 +159,15 @@ extension UserInfoViewController {
     
 }
 extension UserInfoViewController {
-
+    
     func errorAlert(_ vc: UIViewController) {
         let alert = UIAlertController(title: "", message: "Please check again your token", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(alertAction)
         vc.present(alert, animated: true, completion: nil)
     }
-
+    
+    
+    
 }
 

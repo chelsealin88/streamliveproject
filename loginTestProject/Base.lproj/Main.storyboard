@@ -609,13 +609,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97226065397262573" green="0.95734566450119019" blue="0.91764956712722778" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="oQp-SV-SJP" firstAttribute="trailing" secondItem="4eL-3L-Pdo" secondAttribute="trailing" constant="50" id="9TN-HM-DhE"/>
                             <constraint firstItem="oQp-SV-SJP" firstAttribute="trailing" secondItem="5qv-k7-7Dq" secondAttribute="trailing" constant="10" id="BJH-b0-gyM"/>
                             <constraint firstItem="5qv-k7-7Dq" firstAttribute="leading" secondItem="CVD-LK-pP4" secondAttribute="trailing" constant="25" id="IcX-ff-HXY"/>
                             <constraint firstItem="CVD-LK-pP4" firstAttribute="leading" secondItem="oQp-SV-SJP" secondAttribute="leading" constant="20" id="MvO-ai-OqT"/>
-                            <constraint firstItem="4eL-3L-Pdo" firstAttribute="leading" secondItem="oQp-SV-SJP" secondAttribute="leading" constant="50" id="Opf-jj-fKQ"/>
-                            <constraint firstItem="oQp-SV-SJP" firstAttribute="bottom" secondItem="4eL-3L-Pdo" secondAttribute="bottom" constant="20" id="VEc-9H-hrG"/>
+                            <constraint firstItem="oQp-SV-SJP" firstAttribute="bottom" secondItem="4eL-3L-Pdo" secondAttribute="bottom" constant="20" id="W2v-gX-UZm"/>
+                            <constraint firstItem="4eL-3L-Pdo" firstAttribute="leading" secondItem="oQp-SV-SJP" secondAttribute="leading" constant="50" id="aMa-hr-qEo"/>
                             <constraint firstItem="CVD-LK-pP4" firstAttribute="top" secondItem="oQp-SV-SJP" secondAttribute="top" constant="25" id="cno-AI-QhZ"/>
-                            <constraint firstItem="oQp-SV-SJP" firstAttribute="trailing" secondItem="4eL-3L-Pdo" secondAttribute="trailing" constant="50" id="dhx-4L-gNM"/>
                             <constraint firstItem="EA6-qe-Igr" firstAttribute="centerY" secondItem="pVx-Gs-tdj" secondAttribute="centerY" id="kfG-zn-NTV"/>
                             <constraint firstItem="5qv-k7-7Dq" firstAttribute="top" secondItem="oQp-SV-SJP" secondAttribute="top" constant="25" id="phU-EF-KAp"/>
                             <constraint firstItem="EA6-qe-Igr" firstAttribute="centerX" secondItem="pVx-Gs-tdj" secondAttribute="centerX" id="wfH-1R-nUh"/>
@@ -804,21 +804,42 @@
                                     </stepper>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="ZlU-HI-xHf">
+                                <rect key="frame" x="99" y="528" width="226" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購買聯絡人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="765-PS-Fc7">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sp-ej-dHU">
+                                        <rect key="frame" x="129" y="0.0" width="97" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.97226065399999995" green="0.95734566450000003" blue="0.91764956710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RCO-Oo-g7S" firstAttribute="leading" secondItem="vI3-nc-FAt" secondAttribute="leading" constant="25" id="3dB-3R-hfv"/>
                             <constraint firstItem="vI3-nc-FAt" firstAttribute="trailing" secondItem="xjc-NG-Dnf" secondAttribute="trailing" constant="50" id="5AA-uK-lkd"/>
+                            <constraint firstItem="ZlU-HI-xHf" firstAttribute="leading" secondItem="vI3-nc-FAt" secondAttribute="leading" constant="99" id="7oi-dA-dUO"/>
                             <constraint firstItem="vI3-nc-FAt" firstAttribute="trailing" secondItem="VSN-yq-QpJ" secondAttribute="trailing" constant="50" id="AH0-EL-DjZ"/>
                             <constraint firstItem="xjc-NG-Dnf" firstAttribute="leading" secondItem="vI3-nc-FAt" secondAttribute="leading" constant="50" id="F4a-9d-LD6"/>
                             <constraint firstItem="xjc-NG-Dnf" firstAttribute="top" secondItem="VSN-yq-QpJ" secondAttribute="bottom" constant="15" id="GFD-1J-Yg0"/>
                             <constraint firstItem="vI3-nc-FAt" firstAttribute="trailing" secondItem="RCO-Oo-g7S" secondAttribute="trailing" constant="25" id="LW7-W2-8HF"/>
+                            <constraint firstItem="vI3-nc-FAt" firstAttribute="trailing" secondItem="ZlU-HI-xHf" secondAttribute="trailing" constant="50" id="SAV-eZ-6qW"/>
                             <constraint firstItem="RCO-Oo-g7S" firstAttribute="top" secondItem="vI3-nc-FAt" secondAttribute="top" constant="40" id="SLh-hY-q1e"/>
                             <constraint firstItem="vI3-nc-FAt" firstAttribute="bottom" secondItem="xjc-NG-Dnf" secondAttribute="bottom" constant="20" id="fBt-Ws-3a3"/>
+                            <constraint firstItem="VSN-yq-QpJ" firstAttribute="top" secondItem="ZlU-HI-xHf" secondAttribute="bottom" constant="10" id="yc6-oh-uDb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vI3-nc-FAt"/>
                     </view>
                     <connections>
+                        <outlet property="buyerAddressTextField" destination="6sp-ej-dHU" id="Cb0-PW-KK6"/>
                         <outlet property="descriptionLabel" destination="QV3-zj-mym" id="dzD-w2-kJU"/>
                         <outlet property="image" destination="bWg-Ab-YXr" id="xek-y2-iav"/>
                         <outlet property="nameLabel" destination="bEl-Sh-eot" id="vCQ-0S-cef"/>
