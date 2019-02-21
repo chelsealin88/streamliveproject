@@ -34,6 +34,7 @@
 		5ECFCDDE221D7FA900C427F8 /* BuyerAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDDD221D7FA900C427F8 /* BuyerAddressTableViewController.swift */; };
 		5ECFCDE1221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDDF221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift */; };
 		5ECFCDE2221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFCDE0221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib */; };
+		5ECFCDE4221E306400C427F8 /* deleteAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCDE3221E306400C427F8 /* deleteAddress.swift */; };
 		5EDB3F34221BFF79007D15D9 /* StreamingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */; };
 		5EDB3F37221C2A56007D15D9 /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */; };
 		5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3323721FFFEAE008B62B9 /* animation.swift */; };
@@ -74,6 +75,7 @@
 		5ECFCDDD221D7FA900C427F8 /* BuyerAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerAddressTableViewController.swift; sourceTree = "<group>"; };
 		5ECFCDDF221D7FBE00C427F8 /* BuyerAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerAddressTableViewCell.swift; sourceTree = "<group>"; };
 		5ECFCDE0221D7FBE00C427F8 /* BuyerAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyerAddressTableViewCell.xib; sourceTree = "<group>"; };
+		5ECFCDE3221E306400C427F8 /* deleteAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteAddress.swift; sourceTree = "<group>"; };
 		5EDB3F33221BFF79007D15D9 /* StreamingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingItem.swift; sourceTree = "<group>"; };
 		5EDB3F36221C2A56007D15D9 /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
 		5EF3323721FFFEAE008B62B9 /* animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				5ECFCDCF221D324700C427F8 /* leaveStream.swift */,
 				5ECFCDDB221D7E0C00C427F8 /* GetBuyerAddress.swift */,
 				5ECFCDD7221D7D5900C427F8 /* GetTaiwanPostcode.swift */,
+				5ECFCDE3221E306400C427F8 /* deleteAddress.swift */,
 			);
 			path = buyermodel;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				5EDB3F37221C2A56007D15D9 /* PlaceOrder.swift in Sources */,
 				5EC24D03221A87F6001019C3 /* LiveHistoryTableViewCell.swift in Sources */,
 				5EF3323821FFFEAE008B62B9 /* animation.swift in Sources */,
+				5ECFCDE4221E306400C427F8 /* deleteAddress.swift in Sources */,
 				5ECFCDDC221D7E0C00C427F8 /* GetBuyerAddress.swift in Sources */,
 				5EC24CF7221A3E19001019C3 /* PushItem.swift in Sources */,
 				5E1621DE2204360A008C842C /* AddProductViewController.swift in Sources */,

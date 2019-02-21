@@ -9,6 +9,23 @@
 import Foundation
 import SwiftyJSON
 
-//struct PlaceOrder {
-//    static func 
-//}
+struct PlaceOrder {
+    
+    static func placeOrders(_ itemId : Int, _ recipientId: Int , _ header: [String:String], _ body: [String:String], callback: @escaping (Data) -> Void) {
+        
+        Request.postAPI(api: "/api/orders/\(itemId)/\(recipientId)", header: header, body) { (data, statusCode) in
+            if statusCode == 200 {
+                do {
+                    let json = try JSON(data: data)
+                    guard let result = json["result"].bool else { return }
+                    guard let response = json["response"].string else { return }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+}
+
+

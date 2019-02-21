@@ -12,6 +12,7 @@ import SwiftyJSON
 class BuyerAddressTableViewController: UITableViewController {
     
     var addressArray = [AddressData]()
+    var streamStatus = Bool()
     let header = Header.init(token: UserDefaults.standard.value(forKey: UserDefaultKey.token.rawValue) as! String).header
 
 
@@ -54,9 +55,9 @@ class BuyerAddressTableViewController: UITableViewController {
         return cell
     }
  
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -69,9 +70,44 @@ class BuyerAddressTableViewController: UITableViewController {
         }
     }
     
-}
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal, title: "Delete") { (action, view , completion) in
+            
+            if self.streamStatus == false {
+                
+                DeleteAddress().deleteBuyerAddress(self.addressArray[indexPath.row].id, self.header, callBack: { (result) in
+               
+                    if result {
+                        self.addressArray.remove(at: indexPath.row)
+                        DispatchQueue.main.async {
+                            self.tableView.deleteRows(at: [indexPath], with: .fade)
+                        }
+                    
+                    }
+                })
+            } else {
+                
+                let alert = UIAlertController(title: "You can not delete the item while streaming!", message: "", preferredStyle: UIAlertController.Style.alert)
+                let okaction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okaction)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+            print(self.addressArray[indexPath.row].id)
+            
+            completion(true)
+            
 
-extension BuyerAddressTableViewController {
+    }
+        
+        action.backgroundColor = .red
+        
+        return UISwipeActionsConfiguration(actions: [action])
+        
+    }
+    
+    
     
     func getAddress(_ callback: @escaping ([AddressData]) -> Void) {
         
@@ -108,4 +144,5 @@ extension BuyerAddressTableViewController {
     }
     
 }
+
 
