@@ -7,6 +7,8 @@ Stream Live App Project
 買家也能直接再App上購買商品、結帳。
 
 【主要功能】 
+
+
 🍥共同：
 - 取得使用者faceBook資訊
 
