@@ -1,11 +1,14 @@
 # streamliveproject
-Stream Live App Project
+Stream Live App Project - BuyBuyGo
 
 【專案目的】
 
-方便facebook直播賣家統計買家留言+1的問題、統計買家的購買清單及寄送資訊。
+線上直播交易平台，方便facebook直播賣家統計買家留言+1的問題、統計買家的購買清單及寄送資訊。
 
 買家也能直接再App上購買商品、結帳。
+
+使用Facebook登入，使用者可選擇買家或賣家身份，賣家輸入直播間網址創建交易房間；買家則輸入賣家提供的網址，就能進入賣家所在的房間進行交易。
+
 
 【主要功能】 
 
