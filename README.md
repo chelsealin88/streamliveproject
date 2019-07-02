@@ -1,7 +1,7 @@
 # BuyBuyGo Facebook直播購物優化系統
 
 
-【專案目的】
+### 專案目的
 
 線上直播交易平台，方便Facebook直播賣家統計買家留言+1的問題、買家的購買清單及寄送資訊。買家也能直接再App上購買商品、結帳，解決傳統Facebook直播買賣家的使用上的不便，例如：
 
@@ -12,12 +12,12 @@
 使用Facebook登入後，使用者可選擇買家或賣家身份，賣家輸入直播間網址創建交易房間；買家則輸入賣家提供的網址，就能進入賣家所在的房間進行交易。
 
 
-【主要功能】 
+### 主要功能
 
-🍥共同：
+#### 共同：
 - 取得使用者FaceBook資訊
 
-🍥買家：
+#### 買家：
 - 直撥歷史紀錄
 - 新增商品
 - 推播商品（開始直播、結束直播）
@@ -26,7 +26,7 @@
 - 訂單管理
 - 取得使用者之收貨地址
 
-🍥賣家：
+#### 賣家：
 - 取得上架商品資訊
 - 新增收貨人地址
 - 更新收貨人地址
@@ -34,22 +34,22 @@
 - 取得直播中商品內容
 - 下單
 
-【團隊夥伴】
+### 團隊夥伴
 
-### iOS 
+#### iOS 
 - [Albert](https://github.com/asdfg51014/FacebookLiveStreamingShopingApp)
 - [Jerry](https://github.com/aa08666/Livestream-shopping_iOS)
 
-### Andriod
+#### Andriod
 - [Lester](https://github.com/jhengjhe/BuyBuyGo)
 - [James](https://github.com/tn710617/FacebookOptimizedLiveStreamSellingSystem)
 
-### Web 
+#### Web 
 - [Askie](https://github.com/askiebaby/buy-everything)
 - [Kai](https://github.com/LiaoYingKai/comeBuy)
 
 
-### Backend
+#### Backend
 
 - [Ray](https://github.com/tn710617/FacebookOptimizedLiveStreamSellingSystem)
 
